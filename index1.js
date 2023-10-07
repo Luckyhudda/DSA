@@ -134,3 +134,24 @@ function binarySearch(arr, target) {
 // console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 1));
 
 
+function binarySearchRecursive(arr, target){
+return searchFun(arr,target, 0, arr.length-1)
+}
+
+function searchFun(arr, target, start, end){
+    if(start > end){
+        return -1;
+    }
+    let mid = Math.floor((start + end )/2);
+    if(arr[mid] == target){
+        return mid;
+    }else if(arr[mid] < target){
+        return searchFun(arr, target,mid +1, end)
+    } else if(arr[mid] > target){
+        return searchFun(arr, target, start, mid-1)
+    }
+}
+
+// console.log(binarySearchRecursive([1, 2, 3, 4, 5, 6, 7], 4));
+// console.log(binarySearchRecursive([1, 2, 3, 4, 5, 6, 7], 0));
+// console.log(binarySearchRecursive([1, 2, 3, 4, 5, 6, 7], 1));
