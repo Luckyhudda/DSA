@@ -84,7 +84,31 @@ function powThree(num, pw) {
   return result;
 }
 
-console.log(powThree(3,3));
-console.log(powThree(3,1));
-console.log(powThree(3,2));
-console.log(powThree(3,0));
+// console.log(powThree(3,3));
+// console.log(powThree(3,1));
+// console.log(powThree(3,2));
+// console.log(powThree(3,0));
+
+
+function factorialRec(num){
+    if(num <1) return 1;
+    return  num * factorialRec(num-1)
+}
+// console.log(factorial(4));       // 23
+// console.log(factorial(5));      // 120
+// console.log(factorial(1));     // 1
+
+
+function fiboRecursive(num) {
+  if (num  == 1) {
+    return 1;
+  } else if(num == 0){
+    return 0;
+  }
+  return fiboRecursive(num - 1) + fiboRecursive(num - 2);
+}
+
+// console.log(fiboRecursive(5)) 
+// console.log(fiboRecursive(3)) 
+// console.log(fiboRecursive(7))
+
