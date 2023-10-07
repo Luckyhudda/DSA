@@ -73,3 +73,18 @@ function powTow(num, pw){
 // console.log(powTow(2,1));
 
 
+
+function powThree(num, pw) {
+  if (pw == 0) return 1;
+  if (pw == 1) return num;
+  let result = 1;
+  for (let i = 0; i < pw; i++) {
+    result *= num;
+  }
+  return result;
+}
+
+console.log(powThree(3,3));
+console.log(powThree(3,1));
+console.log(powThree(3,2));
+console.log(powThree(3,0));
