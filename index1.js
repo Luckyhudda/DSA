@@ -112,3 +112,12 @@ function fiboRecursive(num) {
 // console.log(fiboRecursive(3)) 
 // console.log(fiboRecursive(7))
 
+function powRec(num, power){
+    if(power == 0){
+        return 1;
+    }
+    if(power == 1){
+        return num;
+    }
+    return num * powRec(num,power -1)
+}
