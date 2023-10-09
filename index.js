@@ -162,3 +162,28 @@ function searchFun(arr, target, start, end) {
 
 */
 
+function bubbleSort(arr) {
+  let n = arr.length;
+  let swapped = false;
+
+  do {
+    swapped = false;
+
+    for (let i = 0; i < n - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+        swapped = true;
+      }
+    }
+
+    n--;
+  } while (swapped);
+
+  return arr;
+}
+
+////////////// BIG O(N^2)
+// console.log(bubbleSort([6, 5, 4, 3, 2, 1]));
+// console.log(bubbleSort([99, 77, 33, 66, 55, 88, 0, 11]));
+// console.log(bubbleSort([-1, 2, 4, 7, 34, -5, 66]));
+
