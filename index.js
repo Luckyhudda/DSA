@@ -187,3 +187,28 @@ function bubbleSort(arr) {
 // console.log(bubbleSort([99, 77, 33, 66, 55, 88, 0, 11]));
 // console.log(bubbleSort([-1, 2, 4, 7, 34, -5, 66]));
 
+function insertionSort(arr) {
+  let n = arr.length;
+
+  // we start from 1 Bcoz we thought first arr[0] is already sorted...
+  for (let i = 1; i < n; i++) {
+    let element = arr[i]; // current element ------------> arr[1]
+    let j = i - 1; // Bcoz we wanna compaire current element with sorted element everytime.... first time arr[0]
+
+    while (j >= 0 && arr[j] > element) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+
+    arr[j + 1] = element;
+  }
+
+  return arr;
+}
+
+////////////////BIG O(N^2)
+// console.log(insertionSort([6, 5, 4, 3, 2, 1]));
+// console.log(insertionSort([99, 77, 33, 66, 55, 88, 0, 11]));
+
+
+
