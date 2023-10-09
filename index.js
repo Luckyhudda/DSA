@@ -211,4 +211,27 @@ function insertionSort(arr) {
 // console.log(insertionSort([99, 77, 33, 66, 55, 88, 0, 11]));
 
 
+function quickSort(arr){
+    if(arr.length <= 0){
+      return arr;
+    }
+
+    let pivot = arr[arr.length - 1];
+    let left = [];
+    let right = [];
+
+
+    for(let i = 0; i<arr.length -1 ;i++){
+      if(arr[i] < pivot){
+        left.push(arr[i])
+      }
+      if(arr[i] > pivot){
+        right.push(arr[i])
+      }
+    }
+    return [...quickSort(left),pivot, ...quickSort(right)]
+}
+// console.log(quickSort([55,44,88,33,0,-11]));
+// console.log(quickSort([4,8,5,2,1,3,9,6,7]));
+
 
