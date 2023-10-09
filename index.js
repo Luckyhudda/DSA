@@ -242,13 +242,39 @@ function isTrue(arr1,arr2){
   for(let i = 0; i<arr1.length; i++){
     for(let j = 0; j<arr2.length;j++){
       if(arr1[i] == arr2[j]){
+        console.log(arr1[i],arr2[j]);
         return true
+
       }
     }
   }
   return false
 
-} // BIG O(N^2)
-console.log(isTrue(["x", "a", "s", "z"], ["f", "g", "j",'a']));
-console.log(isTrue(["x", "a", "s", "z"], ["f", "g", "xx"]));
+} // BIG O(N^2) ==> BIG O(a*b)
+// console.log(isTrue(["x", "a", "s", "z"], ["f", "g", "j",'a']));
+// console.log(isTrue(["x", "a", "s", "z"], ["f", "g", "xx"]));
+
+
+// Optimize solution...
+
+function compairItem(arr1,arr2){
+  // arr1 ====> obj
+  const obj = {}
+  for(let i = 0; i<arr1.length;i++){
+      if(!obj[arr1[i]]){
+        const item = arr1[i];
+        obj[item] = true;
+      }
+  }
+
+  for(let j = 0; j<arr2.length;j++){
+    if(obj[arr2[j]]){
+      return true;
+    }
+  }
+  return false
+}
+
+console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "j", "a"]));
+console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "xx"]));
 
