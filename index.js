@@ -350,3 +350,87 @@ function majorityElement(arr) {
 // console.log(majorityElement([3, 4, 2, 4, 4, 2, 4, 4]));
 
 
+
+
+// 3. **Array Rotation**
+// //////   - Example: Rotate the array [1, 2, 3, 4, 5] by 2 steps to the right.
+// //////   - Input: [1, 2, 3, 4, 5], 2
+// //////   - Output: [4, 5, 1, 2, 3]
+
+
+
+
+// 5. **Find Missing Number**
+// //////   - Example: Find the missing number in [0, 1, 3].
+// //////   - Input: [0, 1, 3]
+////////    - Output: 2
+
+// 6. **Find Intersection of Two Arrays**
+// //////   - Example: Find the intersection of [1, 2, 2, 1] and [2, 2].
+////////    - Input: [1, 2, 2, 1], [2, 2]
+////////    - Output: [2]
+
+
+
+// 9. **Subarray with Given Sum**
+// //////   - Example: Find a subarray with sum 10 in [1, 4, 20, 3, 10, 5].
+// //////   - Input: [1, 4, 20, 3, 10, 5], 10
+// //////   - Output: [20, 3, 10]
+
+// 10. **Move Zeroes**
+////////     - Example: Move zeroes to the end in [0, 1, 0, 3, 12].
+////////     - Input: [0, 1, 0, 3, 12]
+////////     - Output: [1, 3, 12, 0, 0]
+
+// 11. **Kth Largest Element**
+// //////    - Example: Find the 3rd largest element in [3, 2, 1, 5, 6, 4].
+// //////    - Input: [3, 2, 1, 5, 6, 4], 3
+// //////    - Output: 4
+
+// 12. **Remove Duplicates from Sorted Array**
+// //////    - Example: Remove duplicates in [1, 1, 2, 3, 3, 3, 4].
+// //////    - Input: [1, 1, 2, 3, 3, 3, 4]
+// //////    - Output: [1, 2, 3, 4]
+
+// 13. **Product of Array Except Self**
+// //////    - Example: Compute the product of [1, 2, 3, 4].
+////////     - Input: [1, 2, 3, 4]
+////////     - Output: [24, 12, 8, 6]
+
+// 14. **Find Peak Element**
+// //////    - Example: Find a peak element in [1, 2, 3, 1].
+////////     - Input: [1, 2, 3, 1]
+// //////    - Output: 3 (or any peak)
+
+// 15. **Maximum Subarray Sum**
+// //////    - Example: Find the maximum subarray sum in [-2, 1, -3, 4, -1, 2, 1, -5, 4].
+// //////    - Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+// //////    - Output: 6
+
+// 16. **Trapping Rainwater**
+// //////    - Example: Compute the amount of trapped rainwater in [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1].
+// //////    - Input: [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+// //////    - Output: 6
+
+// 17. **Spiral Order Matrix**
+// //////    - Example: Traverse the 3x3 matrix in spiral order.
+// //////    - Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+// //////    - Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
+
+// 18. **Valid Sudoku**
+// //////    - Example: Check if a Sudoku board is valid.
+// //////    - Input:
+// //////      ```
+// //////      [
+// //////        ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+// //////        ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+// //////        [".", "9", "8", ".", ".", ".", ".", "6", "."],
+// //////        ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+// //////        ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+// //////        ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+// //////        [".", "6", ".", ".", ".", ".", "2", "8", "."],
+// //////        [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+// //////        [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+// //////      ]
+// //////      ```
+// //////    - Output: True
