@@ -282,6 +282,29 @@ function reverseStr(str) {
 //  // BIG O(n)
 // console.log(reverseStr('hello man'));
 
+function margeTwoArray(arr1, arr2) {
+  const margedArray = [];
+  let array1Item = arr1[0];
+  let array2Item = arr2[0];
+  let i = 1;
+  let j = 1;
+
+  while (array1Item || array2Item) {
+    if (!array2Item || array1Item < array2Item) {
+      margedArray.push(array1Item);
+      array1Item = arr1[i];
+      i++;
+    } else {
+      margedArray.push(array2Item);
+      array2Item = arr2[j];
+      j++;
+    }
+  }
+
+  return margedArray;
+}
+// console.log(margeTwoArray([1, 2, 4, 5], [2, 3, 6, 8]));
+
 
 
 
