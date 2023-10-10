@@ -305,6 +305,23 @@ function margeTwoArray(arr1, arr2) {
 }
 // console.log(margeTwoArray([1, 2, 4, 5], [2, 3, 6, 8]));
 
+function recurringItem(item) {
+  let hashTable = {};
+  for (let i = 0; i < item.length; i++) {
+    if (!hashTable[item[i]]) {
+      key = item[i];
+      hashTable[key] = true;
+    } else {
+      return item[i];
+    }
+  }
+
+  return undefined;
+}
+
+//// BIG 0(n)
+// console.log(recurringItem([1, 2, 2, 4, 5, 6, 7, 9]));
+
 
 
 
