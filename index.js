@@ -210,71 +210,63 @@ function insertionSort(arr) {
 // console.log(insertionSort([6, 5, 4, 3, 2, 1]));
 // console.log(insertionSort([99, 77, 33, 66, 55, 88, 0, 11]));
 
+function quickSort(arr) {
+  if (arr.length <= 0) {
+    return arr;
+  }
 
-function quickSort(arr){
-    if(arr.length <= 0){
-      return arr;
+  let pivot = arr[arr.length - 1];
+  let left = [];
+  let right = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
     }
-
-    let pivot = arr[arr.length - 1];
-    let left = [];
-    let right = [];
-
-
-    for(let i = 0; i<arr.length -1 ;i++){
-      if(arr[i] < pivot){
-        left.push(arr[i])
-      }
-      if(arr[i] > pivot){
-        right.push(arr[i])
-      }
+    if (arr[i] > pivot) {
+      right.push(arr[i]);
     }
-    return [...quickSort(left),pivot, ...quickSort(right)]
+  }
+  return [...quickSort(left), pivot, ...quickSort(right)];
 }
 // console.log(quickSort([55,44,88,33,0,-11]));
 // console.log(quickSort([4,8,5,2,1,3,9,6,7]));
 
-
 // Question : arr1 [ 'x', "a", "s", "z"] && arr2 = ["f", "g", "j"] if an element are same in both array then return true else return false....
 
-function isTrue(arr1,arr2){
-  
-  for(let i = 0; i<arr1.length; i++){
-    for(let j = 0; j<arr2.length;j++){
-      if(arr1[i] == arr2[j]){
-        console.log(arr1[i],arr2[j]);
-        return true
-
+function isTrue(arr1, arr2) {
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] == arr2[j]) {
+        console.log(arr1[i], arr2[j]);
+        return true;
       }
     }
   }
-  return false
-
+  return false;
 } // BIG O(N^2) ==> BIG O(a*b)
 // console.log(isTrue(["x", "a", "s", "z"], ["f", "g", "j",'a']));
 // console.log(isTrue(["x", "a", "s", "z"], ["f", "g", "xx"]));
 
-
 // Optimize solution...
 
-function compairItem(arr1,arr2){
+function compairItem(arr1, arr2) {
   // arr1 ====> obj
-  const obj = {}
-  for(let i = 0; i<arr1.length;i++){
-      if(!obj[arr1[i]]){
-        const item = arr1[i];
-        obj[item] = true;
-      }
+  const obj = {};
+  for (let i = 0; i < arr1.length; i++) {
+    if (!obj[arr1[i]]) {
+      const item = arr1[i];
+      obj[item] = true;
+    }
   }
 
-  for(let j = 0; j<arr2.length;j++){
-    if(obj[arr2[j]]){
+  for (let j = 0; j < arr2.length; j++) {
+    if (obj[arr2[j]]) {
       return true;
     }
   }
-  return false
+  return false;
 }
-
-console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "j", "a"]));
-console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "xx"]));
-
+//  // BIG O(a+b)
+// console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "j", "a"]));
+// console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "xx"]));
