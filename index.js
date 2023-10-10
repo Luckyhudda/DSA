@@ -327,4 +327,26 @@ function recurringItem(item) {
 
 
 
+//// 8. **Find the Majority Element**
+////  - Input: [3, 3, 4, 2, 4, 4, 2, 4, 4]---------------->> Output: 4
+
+function majorityElement(arr) {
+  const obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]]) {
+      obj[arr[i]]++;
+    } else {
+      obj[arr[i]] = 1;
+    }
+    console.log(obj);
+
+    if(obj[arr[i]] > arr.length /2){
+      return arr[i]
+    }
+  }
+  return -1
+}
+//////BIG O(n)
+// console.log(majorityElement([3, 4, 2, 4, 4, 2, 4, 4]));
+
 
