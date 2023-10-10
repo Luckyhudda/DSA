@@ -270,3 +270,21 @@ function compairItem(arr1, arr2) {
 //  // BIG O(a+b)
 // console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "j", "a"]));
 // console.log(compairItem(["x", "a", "s", "z"], ["f", "g", "xx"]));
+
+function reverseStr(str) {
+  // let arr = str.split('');
+  let result = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    result.push(str[i]);
+  }
+  return result.join("");
+}
+//  // BIG O(n)
+// console.log(reverseStr('hello man'));
+
+
+
+
+
+
+
