@@ -363,6 +363,26 @@ function selectionSort(arr) {
 }
 //console.log(selectionSort([1, 2, 3, 4, 5, 8, 9, 6]));
 
+// 3. **Array Rotation**
+// //////   - Example: Rotate the array [1, 2, 3, 4, 5] by 2 steps to the right.
+// //////   - Input: [1, 2, 3, 4, 5], 2
+// //////   - Output: [4, 5, 1, 2, 3]
+
+//////// Rotate an Array to the Right (Clockwise):
+function rotateArrayClockWise(arr, k) {
+  const result = [];
+  let n = arr.length;
+  for (let i = 0; i < n; i++) {
+    const newIndex = (i + k) % n;
+    result[newIndex] = arr[i];
+  }
+
+  return result;
+}
+
+// console.log(rotateArrayClockWise([1, 2, 3, 4, 5], 2));
+
+
 
 
 
