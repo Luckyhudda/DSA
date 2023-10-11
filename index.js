@@ -452,6 +452,10 @@ function productOfArrayExceptSelf(arr) {
 }
 //console.log(productOfArrayExceptSelf([1,2,3,4]));
 
+
+
+
+
 // 6. **Find Intersection of Two Arrays**
 // //////   - Example: Find the intersection of [1, 2, 2, 1] and [2, 2].
 ////////    - Input: [1, 2, 2, 1], [2, 2]
