@@ -417,6 +417,26 @@ function missingNum(arr){
 //console.log(missingNum([0,1,3,4,5]));
 
 
+// 12. **Remove Duplicates from Sorted Array**
+// //////    - Example: Remove duplicates in [1, 1, 2, 3, 3, 3, 4].
+// //////    - Input: [1, 1, 2, 3, 3, 3, 4]
+// //////    - Output: [1, 2, 3, 4]
+
+ function removeDuplicates(arr){
+
+  const obj ={};
+  let result = [];
+  for(let i = 0; i<arr.length;i++){
+    if(!obj[arr[i]]){
+      obj[arr[i]] = true;
+      result.push(arr[i])
+    }
+  }
+   return result;
+ };
+ ////# BIG O(n)
+// console.log(removeDuplicates([1, 1, 2, 3, 3, 3, 4]));
+
 
 
 
