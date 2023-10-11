@@ -401,48 +401,56 @@ function rotateArrayAntiClockWise(arr, k) {
 // //////   - Input: [0, 1, 3]
 ////////    - Output: 2
 
-function missingNum(arr){
-
-  const n  = arr.length;
-  let expextedSum = (n * (n+1))/2
+function missingNum(arr) {
+  const n = arr.length;
+  let expextedSum = (n * (n + 1)) / 2;
 
   let currentSum = 0;
-  for(let i = 0; i<n;i++){
+  for (let i = 0; i < n; i++) {
     currentSum += arr[i];
   }
 
-  return expextedSum-currentSum;
-
-};
+  return expextedSum - currentSum;
+}
 //console.log(missingNum([0,1,3,4,5]));
-
 
 // 12. **Remove Duplicates from Sorted Array**
 // //////    - Example: Remove duplicates in [1, 1, 2, 3, 3, 3, 4].
 // //////    - Input: [1, 1, 2, 3, 3, 3, 4]
 // //////    - Output: [1, 2, 3, 4]
 
- function removeDuplicates(arr){
-
-  const obj ={};
+function removeDuplicates(arr) {
+  const obj = {};
   let result = [];
-  for(let i = 0; i<arr.length;i++){
-    if(!obj[arr[i]]){
+  for (let i = 0; i < arr.length; i++) {
+    if (!obj[arr[i]]) {
       obj[arr[i]] = true;
-      result.push(arr[i])
+      result.push(arr[i]);
     }
   }
-   return result;
- };
- ////# BIG O(n)
+  return result;
+}
+////# BIG O(n)
 // console.log(removeDuplicates([1, 1, 2, 3, 3, 3, 4]));
 
+// 13. **Product of Array Except Self**
+// //////    - Example: Compute the product of [1, 2, 3, 4].
+////////     - Input: [1, 2, 3, 4]
+////////     - Output: [24, 12, 8, 6];
 
+function productOfArrayExceptSelf(arr) {
+  let result = [];
 
-
-
-
-
+  for (let i = 0; i < arr.length; i++) {
+    let product = 1;
+    for (let j = 0; j < arr.length; j++) {
+      product *= arr[j];
+    }
+    result.push(product / arr[i]);
+  }
+  return result;
+}
+//console.log(productOfArrayExceptSelf([1,2,3,4]));
 
 // 6. **Find Intersection of Two Arrays**
 // //////   - Example: Find the intersection of [1, 2, 2, 1] and [2, 2].
@@ -463,9 +471,6 @@ function missingNum(arr){
 // //////    - Example: Find the 3rd largest element in [3, 2, 1, 5, 6, 4].
 // //////    - Input: [3, 2, 1, 5, 6, 4], 3
 // //////    - Output: 4
-
-
-
 
 // 14. **Find Peak Element**
 // //////    - Example: Find a peak element in [1, 2, 3, 1].
