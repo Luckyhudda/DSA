@@ -382,6 +382,20 @@ function rotateArrayClockWise(arr, k) {
 
 // console.log(rotateArrayClockWise([1, 2, 3, 4, 5], 2));
 
+///////////////// Rotate an Array to the Left (Counterclockwise)
+function rotateArrayAntiClockWise(arr, k) {
+  const result = [];
+  let n = arr.length;
+  for (let i = 0; i < n; i++) {
+    const newIndex = (i - k + n) % n;
+    result[newIndex] = arr[i];
+  }
+
+  return result;
+}
+
+//console.log(rotateArrayAntiClockWise([1, 2, 3, 4, 5], 2));
+
 
 
 
