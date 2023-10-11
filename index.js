@@ -322,11 +322,6 @@ function recurringItem(item) {
 //// BIG 0(n)
 // console.log(recurringItem([1, 2, 2, 4, 5, 6, 7, 9]));
 
-
-
-
-
-
 //// 8. **Find the Majority Element**
 ////  - Input: [3, 3, 4, 2, 4, 4, 2, 4, 4]---------------->> Output: 4
 
@@ -340,37 +335,44 @@ function majorityElement(arr) {
     }
     console.log(obj);
 
-    if(obj[arr[i]] > arr.length /2){
-      return arr[i]
+    if (obj[arr[i]] > arr.length / 2) {
+      return arr[i];
     }
   }
-  return -1
+  return -1;
 }
 //////BIG O(n)
 // console.log(majorityElement([3, 4, 2, 4, 4, 2, 4, 4]));
 
+// SELECTION SORT ALGO FOR SORTING.........
+
+function selectionSort(arr) {
+  let n = arr.length;
+  for (let i = 0; i < n; i++) {
+    let min = i;
+    let temp = arr[i];
+    for (let j = i + 1; j < n; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+    arr[i] = arr[min];
+    arr[min] = temp;
+  }
+  return arr;
+}
+//console.log(selectionSort([1, 2, 3, 4, 5, 8, 9, 6]));
 
 
 
-// 3. **Array Rotation**
-// //////   - Example: Rotate the array [1, 2, 3, 4, 5] by 2 steps to the right.
-// //////   - Input: [1, 2, 3, 4, 5], 2
-// //////   - Output: [4, 5, 1, 2, 3]
 
 
 
-
-// 5. **Find Missing Number**
-// //////   - Example: Find the missing number in [0, 1, 3].
-// //////   - Input: [0, 1, 3]
-////////    - Output: 2
 
 // 6. **Find Intersection of Two Arrays**
 // //////   - Example: Find the intersection of [1, 2, 2, 1] and [2, 2].
 ////////    - Input: [1, 2, 2, 1], [2, 2]
 ////////    - Output: [2]
-
-
 
 // 9. **Subarray with Given Sum**
 // //////   - Example: Find a subarray with sum 10 in [1, 4, 20, 3, 10, 5].
@@ -387,15 +389,8 @@ function majorityElement(arr) {
 // //////    - Input: [3, 2, 1, 5, 6, 4], 3
 // //////    - Output: 4
 
-// 12. **Remove Duplicates from Sorted Array**
-// //////    - Example: Remove duplicates in [1, 1, 2, 3, 3, 3, 4].
-// //////    - Input: [1, 1, 2, 3, 3, 3, 4]
-// //////    - Output: [1, 2, 3, 4]
 
-// 13. **Product of Array Except Self**
-// //////    - Example: Compute the product of [1, 2, 3, 4].
-////////     - Input: [1, 2, 3, 4]
-////////     - Output: [24, 12, 8, 6]
+
 
 // 14. **Find Peak Element**
 // //////    - Example: Find a peak element in [1, 2, 3, 1].
