@@ -396,6 +396,27 @@ function rotateArrayAntiClockWise(arr, k) {
 
 //console.log(rotateArrayAntiClockWise([1, 2, 3, 4, 5], 2));
 
+// 5. **Find Missing Number**
+// //////   - Example: Find the missing number in [0, 1, 3].
+// //////   - Input: [0, 1, 3]
+////////    - Output: 2
+
+function missingNum(arr){
+
+  const n  = arr.length;
+  let expextedSum = (n * (n+1))/2
+
+  let currentSum = 0;
+  for(let i = 0; i<n;i++){
+    currentSum += arr[i];
+  }
+
+  return expextedSum-currentSum;
+
+};
+//console.log(missingNum([0,1,3,4,5]));
+
+
 
 
 
