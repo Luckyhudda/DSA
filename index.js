@@ -632,6 +632,30 @@ function KthLasgest(array,position){
 
 
 
+// 14. **Find Peak Element**
+// //////    - Example: Find a peak element in [1, 2, 3, 1].
+////////     - Input: [1, 2, 3, 1]
+// //////    - Output: 3 (or any peak)
+
+function findPeak(arr){
+ let peakElement = 0;
+
+ if(arr.length <1){
+  return null;
+ }
+
+
+ for(let i =0; i<arr.length;i++){
+  if(arr[i] >= arr[peakElement]){
+    peakElement = arr[i];
+  }
+ }
+
+ return peakElement
+};
+// console.log(findPeak([1,2,3,15]));
+//////////////////////////////////////////////// ANOTHER WAY TO SOLVE THIS IS BINARY SEARCH ITS GIVE ====> BIG 0(n)
+
 // 15. **Maximum Subarray Sum**
 // //////    - Example: Find the maximum subarray sum in [-2, 1, -3, 4, -1, 2, 1, -5, 4].
 // //////    - Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
