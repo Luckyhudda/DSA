@@ -591,6 +591,41 @@ function movesZerosSwaping(arr){
 
 
 
+// 11. **Kth Largest Element**
+// //////    - Example: Find the 3rd largest element in [3, 2, 1, 5, 6, 4].
+// //////    - Input: [3, 2, 1, 5, 6, 4], 3
+// //////    - Output: 4
+
+
+function sortFun(arr){
+  if(arr.length <=1){
+    return arr;
+  }
+  let pivot = arr[arr.length-1];
+  let left = [];
+  let right = [];
+
+  for(let i = 0; i<arr.length;i++){
+    if(arr[i] < pivot){
+      left.push(arr[i])
+    }
+    if (arr[i] > pivot) {
+      right.push(arr[i]);
+    }
+  }
+
+  return [...sortFun(left),pivot,...sortFun(right)]
+}
+
+
+function KthLasgest(array,position){
+
+  let sortedArray = sortFun(array);
+  return sortedArray[sortedArray.length-position]
+
+};
+// console.log(KthLasgest([3, 2, 1, 5, 6, 4], 3));
+
 
 
 
