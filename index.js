@@ -97,7 +97,7 @@ function fiboRecursive(num) {
   return fiboRecursive(num - 1) + fiboRecursive(num - 2);
 }
 
-// console.log(fiboRecursive(5))
+// console.log(fiboRecursive(25))
 // console.log(fiboRecursive(3))
 // console.log(fiboRecursive(7))
 
@@ -452,34 +452,50 @@ function productOfArrayExceptSelf(arr) {
 }
 //console.log(productOfArrayExceptSelf([1,2,3,4]));
 
+//////////////// DYNAMIC PROGRAMMING...........
+
+function memoizedFun(n) {
+  const cache = {};
+  if (n in cache) {
+    return n + 90;
+  } else {
+    console.log("Long Time");
+    cache[n] = n + 90;
+    return cache[n];
+  }
+}
+
+// console.log(memoizedFun(5));
+// console.log(memoizedFun(5));
+
+////////////// MAMOIZED FUNCTION USING CLOSER....
+
+function momoCloser(n) {
+  const cache = {};
+  return function (n) {
+    if (n in cache) {
+      return n + 90;
+    } else {
+      console.log("long time");
+      cache[n] = n + 90;
+      return cache[n];
+    }
+  };
+}
+
+const memoFn = momoCloser();
+
+// console.log(memoFn(5));
+// console.log(memoFn(5));
 
 
 
 
-// 6. **Find Intersection of Two Arrays**
-// //////   - Example: Find the intersection of [1, 2, 2, 1] and [2, 2].
-////////    - Input: [1, 2, 2, 1], [2, 2]
-////////    - Output: [2]
 
-// 9. **Subarray with Given Sum**
-// //////   - Example: Find a subarray with sum 10 in [1, 4, 20, 3, 10, 5].
-// //////   - Input: [1, 4, 20, 3, 10, 5], 10
-// //////   - Output: [20, 3, 10]
 
-// 10. **Move Zeroes**
-////////     - Example: Move zeroes to the end in [0, 1, 0, 3, 12].
-////////     - Input: [0, 1, 0, 3, 12]
-////////     - Output: [1, 3, 12, 0, 0]
 
-// 11. **Kth Largest Element**
-// //////    - Example: Find the 3rd largest element in [3, 2, 1, 5, 6, 4].
-// //////    - Input: [3, 2, 1, 5, 6, 4], 3
-// //////    - Output: 4
 
-// 14. **Find Peak Element**
-// //////    - Example: Find a peak element in [1, 2, 3, 1].
-////////     - Input: [1, 2, 3, 1]
-// //////    - Output: 3 (or any peak)
+
 
 // 15. **Maximum Subarray Sum**
 // //////    - Example: Find the maximum subarray sum in [-2, 1, -3, 4, -1, 2, 1, -5, 4].
@@ -513,3 +529,10 @@ function productOfArrayExceptSelf(arr) {
 // //////      ]
 // //////      ```
 // //////    - Output: True
+
+
+
+// 9. **Subarray with Given Sum**
+// //////   - Example: Find a subarray with sum 10 in [1, 4, 20, 3, 10, 5].
+// //////   - Input: [1, 4, 20, 3, 10, 5], 10
+// //////   - Output: [20, 3, 10]
