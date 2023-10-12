@@ -549,6 +549,46 @@ function intersectionSolution(arr1, arr2) {
 // console.log(intersectionSolution([1, 2, 2, 1], [2, 2]));
 // console.log(intersectionSolution([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
 
+// 10. **Move Zeroes**
+////////     - Example: Move zeroes to the end in [0, 1, 0, 3, 12].
+////////     - Input: [0, 1, 0, 3, 12]
+////////     - Output: [1, 3, 12, 0, 0]
+
+function movesZeros(arr) {
+  let answare = [];
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      answare.push(arr[i]);
+    } else {
+      count++;
+    }
+  }
+
+  for (let j = 0; j < count; j++) {
+    answare.push(0);
+  }
+
+  return answare;
+}
+// console.log(movesZeros([0, 1, 0, 3, 12]));
+
+
+function movesZerosSwaping(arr){
+  let zeroIndex = 0;
+
+  for(let i = 0; i<arr.length;i++){
+    if(arr[i] !== 0){
+      [arr[i],arr[zeroIndex]] = [arr[zeroIndex],arr[i]];
+      zeroIndex++;
+    }
+  }
+  return arr;
+}
+
+// console.log(movesZerosSwaping([1,0,3,0,12]));
+
+
 
 
 
