@@ -510,6 +510,17 @@ const fasterFib = fibonacciMaster();
 
 // console.log(fasterFib(25));
 
+///////// FIBONACCHI ARRAY......
+
+function fiboArray(n) {
+  let fibArray = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    fibArray.push(fibArray[i - 2] + fibArray[i - 1]);
+  }
+  return fibArray;
+}
+
+// console.log(fiboArray(7));
 
 
 
