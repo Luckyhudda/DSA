@@ -522,6 +522,34 @@ function fiboArray(n) {
 
 // console.log(fiboArray(7));
 
+// 6. **Find Intersection of Two Arrays**
+// //////   - Example: Find the intersection of [1, 2, 2, 1] and [2, 2].
+////////    - Input: [1, 2, 2, 1], [2, 2]
+////////    - Output: [2]
+
+function intersectionSolution(arr1, arr2) {
+  let answare = [];
+  let hashing = {};
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (!hashing[arr1[i]]) {
+      hashing[arr1[i]] = true;
+    }
+  }
+
+  for (let j = 0; j < arr2.length; j++) {
+    if (hashing[arr2[j]]) {
+      answare.push(arr2[j]);
+      delete hashing[arr2[j]];
+    }
+  }
+
+  return answare;
+}
+// console.log(intersectionSolution([1, 2, 2, 1], [2, 2]));
+// console.log(intersectionSolution([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
+
+
 
 
 
