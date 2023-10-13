@@ -742,23 +742,21 @@ function sumOfArr(arr){
 // console.log(sumOfArr([1,2,3,4,5,6,7,9,0]));
 
 
-// // // // 10   Write a function to find the average of an array of numbers...........
-
-// function avg() {
-//     return sumOfArr / (sumarr.length);
-// }
-// console.log(avg())
-
-// // // //  11   Write a function to convert a string to title case....................
-
-// let tStra = 'lucky';
-
-// function ttst() {
-//     return tStra.replace(tStra[0], tStra[0].toUpperCase())
-// }
-// console.log(ttst());
 
 // // // // 12  Write a function to convert a string to camel case....................
+
+
+function toCamelCase(str){
+  let arr = str.split(' ');
+  
+  let answare = ''
+
+  for(let i = 0; i<arr.length;i++){
+    answare = answare + (arr[i][0].toUpperCase() + arr[i].slice(1))
+    }
+    return answare
+};
+//console.log(toCamelCase("string to camel case"));
 
 // // // // 13  Write a function to convert a string to a kebab case...............
 
