@@ -643,8 +643,6 @@ function findPeak(arr) {
 
 // // # Count Vowels and Consonants:  Question: Write a program to count the number of vowels and consonants in a given string.
 
-Input: "Hello World";
-
 function countLetters(input) {
   let vowels = ["a", "e", "i", "o", "u"];
   let vowel = 0;
@@ -661,8 +659,7 @@ function countLetters(input) {
 
   return `vowel:${vowel} & consonant: ${consonant}`;
 }
-console.log(countLetters("Hello World")); //Vowels: 3     //Consonants: 7
-
+//console.log(countLetters("Hello World")); //Vowels: 3     //Consonants: 7
 
 function countLetters2(input) {
   let vowels = ["a", "e", "i", "o", "u"];
@@ -689,7 +686,35 @@ function countLetters2(input) {
 
   return `vowel:${vowel} & consonant: ${consonant}`;
 }
-console.log(countLetters2("Hello World")); //Vowels: 3     //Consonants: 7
+//console.log(countLetters2("Hello World")); //Vowels: 3     //Consonants: 7
+
+////## Check if Two Strings are Anagrams:  Question: Write a program to check if two strings are anagrams of each other.
+
+/////////////Input: "listen", "silent"   Output: True
+
+function areAnagram(str1 = '',str2 = ''){
+  if(str1.length < 1 && str2.length < 1) return false;
+if(str1.length !== str2.length) return false;
+
+
+  const store = {};
+
+  for(let i = 0; i<str1.length;i++){
+    store[str1[i]] =  (store[str1[i]] || 0 ) +1 ;
+    
+  };
+
+
+  for(let i = 0; i<str2.length;i++){
+    if(!store[str2[i]]){
+      return false;
+    }
+    store[str2[i]]--
+  }
+ return true;
+};
+//console.log(areAnagram('moonn','mnoon'));
+
 
 
 // 15. **Maximum Subarray Sum**
