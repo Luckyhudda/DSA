@@ -573,13 +573,12 @@ function movesZeros(arr) {
 }
 // console.log(movesZeros([0, 1, 0, 3, 12]));
 
-
-function movesZerosSwaping(arr){
+function movesZerosSwaping(arr) {
   let zeroIndex = 0;
 
-  for(let i = 0; i<arr.length;i++){
-    if(arr[i] !== 0){
-      [arr[i],arr[zeroIndex]] = [arr[zeroIndex],arr[i]];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      [arr[i], arr[zeroIndex]] = [arr[zeroIndex], arr[i]];
       zeroIndex++;
     }
   }
@@ -588,73 +587,110 @@ function movesZerosSwaping(arr){
 
 // console.log(movesZerosSwaping([1,0,3,0,12]));
 
-
-
-
 // 11. **Kth Largest Element**
 // //////    - Example: Find the 3rd largest element in [3, 2, 1, 5, 6, 4].
 // //////    - Input: [3, 2, 1, 5, 6, 4], 3
 // //////    - Output: 4
 
-
-function sortFun(arr){
-  if(arr.length <=1){
+function sortFun(arr) {
+  if (arr.length <= 1) {
     return arr;
   }
-  let pivot = arr[arr.length-1];
+  let pivot = arr[arr.length - 1];
   let left = [];
   let right = [];
 
-  for(let i = 0; i<arr.length;i++){
-    if(arr[i] < pivot){
-      left.push(arr[i])
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
     }
     if (arr[i] > pivot) {
       right.push(arr[i]);
     }
   }
 
-  return [...sortFun(left),pivot,...sortFun(right)]
+  return [...sortFun(left), pivot, ...sortFun(right)];
 }
 
-
-function KthLasgest(array,position){
-
+function KthLasgest(array, position) {
   let sortedArray = sortFun(array);
-  return sortedArray[sortedArray.length-position]
-
-};
+  return sortedArray[sortedArray.length - position];
+}
 // console.log(KthLasgest([3, 2, 1, 5, 6, 4], 3));
-
-
-
-
-
-
 
 // 14. **Find Peak Element**
 // //////    - Example: Find a peak element in [1, 2, 3, 1].
 ////////     - Input: [1, 2, 3, 1]
 // //////    - Output: 3 (or any peak)
 
-function findPeak(arr){
- let peakElement = 0;
+function findPeak(arr) {
+  let peakElement = 0;
 
- if(arr.length <1){
-  return null;
- }
-
-
- for(let i =0; i<arr.length;i++){
-  if(arr[i] >= arr[peakElement]){
-    peakElement = arr[i];
+  if (arr.length < 1) {
+    return null;
   }
- }
 
- return peakElement
-};
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= arr[peakElement]) {
+      peakElement = arr[i];
+    }
+  }
+
+  return peakElement;
+}
 // console.log(findPeak([1,2,3,15]));
 //////////////////////////////////////////////// ANOTHER WAY TO SOLVE THIS IS BINARY SEARCH ITS GIVE ====> BIG 0(n)
+
+// // # Count Vowels and Consonants:  Question: Write a program to count the number of vowels and consonants in a given string.
+
+Input: "Hello World";
+
+function countLetters(input) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let vowel = 0;
+  let consonant = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] == " ") continue;
+    if (vowels.includes(input[i])) {
+      vowel++;
+    } else {
+      consonant++;
+    }
+  }
+
+  return `vowel:${vowel} & consonant: ${consonant}`;
+}
+console.log(countLetters("Hello World")); //Vowels: 3     //Consonants: 7
+
+
+function countLetters2(input) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let vowel = 0;
+  let consonant = 0;
+
+  let obj = {};
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] == " ") continue;
+    else {
+      obj[input[i]] = true;
+    }
+  }
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] == " ") continue;
+    if (obj[input[i]] == vowels.includes(input[i])) {
+      vowel++;
+    } else {
+      consonant++;
+    }
+  }
+
+  return `vowel:${vowel} & consonant: ${consonant}`;
+}
+console.log(countLetters2("Hello World")); //Vowels: 3     //Consonants: 7
+
 
 // 15. **Maximum Subarray Sum**
 // //////    - Example: Find the maximum subarray sum in [-2, 1, -3, 4, -1, 2, 1, -5, 4].
@@ -688,8 +724,6 @@ function findPeak(arr){
 // //////      ]
 // //////      ```
 // //////    - Output: True
-
-
 
 // 9. **Subarray with Given Sum**
 // //////   - Example: Find a subarray with sum 10 in [1, 4, 20, 3, 10, 5].
