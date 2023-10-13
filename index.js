@@ -721,62 +721,26 @@ function revstr(str) {
   if (str.toLowerCase() == reverse.toLocaleLowerCase()) return true;
   return false;
 }
-console.log(revstr("madam")); // true
-console.log(revstr("lucky")); // false
-console.log(revstr("Saroras")); // true
+// console.log(revstr("madam")); // true
+// console.log(revstr("lucky")); // false
+// console.log(revstr("Saroras")); // true
 
-// // // // 07   Write a function to check if a given string is an anagram of another string.........
-// let a = 'lucky';
-// let b = 'ckluy';
 
-// function anagramFunc(a,b) {
-//     let al = a.length;
-//     let bl = b.length;
-
-//     if (al !== bl) {
-//         console.log(`Invalid input`)
-//         return
-//     }
-//     let sa = a.split('').sort().join('');
-//     console.log(sa)
-//     let as = b.split('').sort().join('');
-//     console.log(as)
-//     if (sa === as) {
-//         console.log(true)
-//     } else {
-//         console.log(false)
-//     }
-
-// }
-// anagramFunc(a,b)
-
-// // // //  08   Write a function to find the factorial of a given number...............
-
-// let fact = 3;
-// let result = 1;
-
-// function factorial00(fact,result) {
-//     if (fact == 0 || fact == 1) {
-//         return 1;
-//     } else if (fact > 1) {
-//         for (let i = fact; i >= 1; i--) {
-//             result = result * i
-//         }
-//         return result;
-//     }
-// }
-// console.log(factorial00(fact,result))
 
 // // // // 09   Write a function to find the sum of an array of numbers............
-// let sumarr = [1, 2, 3, 4, 5, 6]; // 21
-// let sumOfArr = 0;
 
-// function sum(sumarr,sumOfArr) {
-//     for (let i = 0; i < sumarr.length; i++) {
-//         sumOfArr += sumarr[i];
-//     } return sumOfArr;
-// }
-// console.log(sum(sumarr,sumOfArr))
+function sumOfArr(arr){
+
+  let sum = 0;
+  for(let i =0; i<arr.length;i++){
+    sum += arr[i];
+  }
+
+  return sum
+
+};
+// console.log(sumOfArr([1,2,3,4,5,6,7,9,0]));
+
 
 // // // // 10   Write a function to find the average of an array of numbers...........
 
