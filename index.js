@@ -829,17 +829,22 @@ function findUnion(arr1, arr2) {
 
 // // // // 26  Write a function to find the difference of two arrays...
 
-// let arr26 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// let arr26a = [2, 4, 6, 7, 9, 0, 11];
-// let differenceOfArr = [];
+function findDifference(arr1,arr2){
+   const tracker = {};
+   const result = []
 
-// function findDifference(){
-//    let diff1 = arr26.filter(x => !arr26a.includes(x))
-//    let diff2 = arr26a.filter(x => !arr26.includes(x))
-//    differenceOfArr = [...diff1, ...diff2]
-//   return differenceOfArr
-// }
-// console.log(findDifference())
+   for(let i = 0; i<arr2.length;i++){
+    tracker[arr2[i]] = true;
+   }
+
+   for(let i = 0; i<arr1.length;i++){
+    if(!tracker[arr1[i]]){
+      result.push(arr1[i]);
+    }
+   }
+   return result;
+}
+console.log(findDifference([1, 2, 3, 4, 5, 6, 7, 8, 9, 9], [2, 4, 6, 7, 9, 0, 11]))
 
 // // // // 27  Write a function to sort an array in ascending order.
 
