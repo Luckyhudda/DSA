@@ -725,50 +725,46 @@ function revstr(str) {
 // console.log(revstr("lucky")); // false
 // console.log(revstr("Saroras")); // true
 
-
-
 // // // // 09   Write a function to find the sum of an array of numbers............
 
-function sumOfArr(arr){
-
+function sumOfArr(arr) {
   let sum = 0;
-  for(let i =0; i<arr.length;i++){
+  for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
 
-  return sum
-
-};
+  return sum;
+}
 // console.log(sumOfArr([1,2,3,4,5,6,7,9,0]));
-
-
 
 // // // // 12  Write a function to convert a string to camel case....................
 
+function toCamelCase(str) {
+  let arr = str.split(" ");
 
-function toCamelCase(str){
-  let arr = str.split(' ');
-  
-  let answare = ''
+  let answare = "";
 
-  for(let i = 0; i<arr.length;i++){
-    answare = answare + (arr[i][0].toUpperCase() + arr[i].slice(1))
-    }
-    return answare
-};
+  for (let i = 0; i < arr.length; i++) {
+    answare = answare + (arr[i][0].toUpperCase() + arr[i].slice(1));
+  }
+  return answare;
+}
 //console.log(toCamelCase("string to camel case"));
-
-// // // // 13  Write a function to convert a string to a kebab case...............
-
-// // // // 14  Write a function to truncate a string to a given length.....................
 
 // // // // 15  Write a function to remove all spaces from a string................
 // let reStr = '     file ';
 
-// function trimming() {
-//     return reStr.trim(' ');
-// }
-// console.log(trimming())
+function removeSpace(str) {
+  let result = "";
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      result += str[i];
+    }
+  }
+  return result;
+}
+// console.log(removeSpace('     file '));
 
 // // // // 16   Write a function to capitalise the first letter of each word in a string..........
 // // // // 17  Write a function to generate a random number between two given numbers...
