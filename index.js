@@ -844,7 +844,7 @@ function findDifference(arr1,arr2){
    }
    return result;
 }
-console.log(findDifference([1, 2, 3, 4, 5, 6, 7, 8, 9, 9], [2, 4, 6, 7, 9, 0, 11]))
+// console.log(findDifference([1, 2, 3, 4, 5, 6, 7, 8, 9, 9], [2, 4, 6, 7, 9, 0, 11]))
 
 // // // // 27  Write a function to sort an array in ascending order.
 
