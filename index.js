@@ -767,6 +767,21 @@ function removeSpace(str) {
 // console.log(removeSpace('     file '));
 
 // // // // 16   Write a function to capitalise the first letter of each word in a string..........
+
+function capitaliseLetter(str){
+ let arr = str.split(' ');
+
+ for(let i = 0; i<arr.length;i++){
+  arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+ }
+
+ 
+return arr.join(' ')
+};
+console.log(capitaliseLetter('my name is lucky hudda'));
+
+
+
 // // // // 17  Write a function to generate a random number between two given numbers...
 
 // let min = 12;
