@@ -778,18 +778,21 @@ function capitaliseLetter(str){
  
 return arr.join(' ')
 };
-console.log(capitaliseLetter('my name is lucky hudda'));
+// console.log(capitaliseLetter('my name is lucky hudda'));
 
 
 
-// // // // 17  Write a function to generate a random number between two given numbers...
+// // // // 18  Write a function to shuffle an array.....// change the order of array elements...
 
-// let min = 12;
-// let max = 23;
-// const aaa = Math.floor(Math.random() * (max - min + 1)) + min;
-// console.log(aaa)
+function shuffleArray(arr){
+ for(let i = 0; i<arr.length;i++){
+  const randomEle = Math.floor( Math.random(i*1) +1);
+  [arr[i], arr[randomEle]] = [arr[randomEle], arr[i]]
+ }
 
-// // // // 18  Write a function to shuffle an array.....
+ return arr;
+};
+console.log(shuffleArray([1,2,3,4,5,6]));
 
 // // // // 19  Write a function to flatten an array of nested arrays.
 
