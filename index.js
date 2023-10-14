@@ -768,120 +768,64 @@ function removeSpace(str) {
 
 // // // // 16   Write a function to capitalise the first letter of each word in a string..........
 
-function capitaliseLetter(str){
- let arr = str.split(' ');
+function capitaliseLetter(str) {
+  let arr = str.split(" ");
 
- for(let i = 0; i<arr.length;i++){
-  arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
- }
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+  }
 
- 
-return arr.join(' ')
-};
+  return arr.join(" ");
+}
 // console.log(capitaliseLetter('my name is lucky hudda'));
-
-
 
 // // // // 18  Write a function to shuffle an array.....// change the order of array elements...
 
-function shuffleArray(arr){
- for(let i = 0; i<arr.length;i++){
-  const randomEle = Math.floor( Math.random(i*1) +1);
-  [arr[i], arr[randomEle]] = [arr[randomEle], arr[i]]
- }
+function shuffleArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const randomEle = Math.floor(Math.random(i * 1) + 1);
+    [arr[i], arr[randomEle]] = [arr[randomEle], arr[i]];
+  }
 
- return arr;
-};
+  return arr;
+}
 //console.log(shuffleArray([1,2,3,4,5,6]));
 
 // // // // 19  Write a function to flatten an array of nested arrays.
 function flattenArr(arr) {
-  
   let answare = [];
 
-  for(let i = 0; i<arr.length;i++){
-    if(Array.isArray(arr[i])){
-      answare = answare.concat(flattenArr(arr[i]))
-    }else{
-      answare.push(arr[i])
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      answare = answare.concat(flattenArr(arr[i]));
+    } else {
+      answare.push(arr[i]);
     }
   }
-return answare;
+  return answare;
 }
-console.log(flattenArr([1, 2, 3, [4, 5, 6, [7, 8, 9]]]));
-
-// // // // 20  Write a function to find the second largest number in an array.
-// let arr20 = [1, 2, 3, 4, 5, 26, 7, 8, 9, 11, 12, 13, 15];
-// let arrr = [];
-// function secLargest() {
-//     arr20.sort(function (a, b) { return a - b })
-//     for (let i = arr20.length - 1; i > 0; i--) {
-//         arrr.push(arr20[i])
-//     }
-//     return arrr[1]
-// }
-// console.log(secLargest())
-
-// // // // 21  Write a function to find the second smallest number in an array.
-
-// let arr21 = [1,2,3,4,5,-621,32,43,-32,444,-234,0,-98];
-// function secondSmallest(){
-//     arr21.sort((a, b) => a - b);
-//     return arr21[1];
-// }
-// console.log(secondSmallest())
-
-// // // // 22  Write a function to find the maximum sum of two numbers in an array.
-// let arr22 = [1, 2, 3, 5, 6, 4, 8, 9, 55, 7, 15];
-// let MaxSumNum = 0;
-// function MaxSum(a, b) {
-//     for (let i = 0; i < arr22.length; i++) {
-//         for (let j = i + 1; j < arr22.length; j++) {
-//             let twoNumSum = arr22[i] + arr22[j];
-//             if (twoNumSum > MaxSumNum) {
-//                 MaxSumNum = twoNumSum
-//             }
-//         }
-//     }
-//     return MaxSumNum;
-// }
-// console.log(MaxSum())
-
-// // // // 23  Write a function to find the second maximum sum of two numbers in an array.
-// let arr23 = [1, 22, 13, 41, 55, 26, 7, 8, 9];
-// function secondMaxSum() {
-//     arr23.sort((a, b) => a - b);
-//     return arr23[arr23.length - 2] + arr23[arr23.length - 3];
-// }
-// console.log(secondMaxSum())
-
-// // // // 24  Write a function to find the intersection of two arrays...
-
-// // // Intersection => same values in both arrays...
-
-// let arr24 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// let arr24a = [2, 4, 6, 7, 9, 0, 11];
-// let intersection = []
-// function intersectionOfArrays() {
-//     //    intersection = arr24.filter(e => arr24a.indexOf(e) !== -1);
-//     intersection = [...arr24, ...arr24a];
-//     intersection = intersection.filter((e, el) => intersection.indexOf(e) !== el)
-//     return intersection;
-// }
-// console.log(intersectionOfArrays())
+// console.log(flattenArr([1, 2, 3, [4, 5, 6, [7, 8, 9]]]));
 
 // // // // 25  Write a function to find the union of two arrays...
 
-// let arr25 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// let arr25a = [2, 4, 6, 7, 9, 0, 11];
-// let unionOfArr = [];
+function findUnion(arr1, arr2) {
+  const unionArr = [];
+  const selectior = {};
 
-// function findUnion() {
-//     unionOfArr = [...arr25, ...arr25a].sort((a, b) => a - b);
-//     unionOfArr = unionOfArr.filter((e1, e2) => { return unionOfArr.indexOf(e1) === e2 })
-//     return unionOfArr;
-// }
-// console.log(findUnion());
+  for (let i = 0; i < arr1.length; i++) {
+    if (!selectior[arr1[i]]) {
+      selectior[arr1[i]] = true;
+      unionArr.push(arr1[i]);
+    }
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    if (!selectior[arr2[i]]) {
+      unionArr.push(arr2[i]);
+    }
+  }
+  return unionArr;
+}
+// console.log(findUnion([1, 2, 3, 4, 5, 6, 7, 8, 9, 9], [2, 4, 6, 7, 9, 0, 11]));
 
 // // // // 26  Write a function to find the difference of two arrays...
 
@@ -2085,3 +2029,19 @@ console.log(flattenArr([1, 2, 3, [4, 5, 6, [7, 8, 9]]]));
 // // //////   - Example: Find a subarray with sum 10 in [1, 4, 20, 3, 10, 5].
 // // //////   - Input: [1, 4, 20, 3, 10, 5], 10
 // // //////   - Output: [20, 3, 10]
+
+// // // // 22  Write a function to find the maximum sum of two numbers in an array.
+// function MaxSum(arr) {
+// let  MaxSumNum = 0;
+//
+//     return MaxSumNum;
+// }
+// console.log(MaxSum([1, 2, 3, 5, 6, 4, 8, 9, 55, 7, 15]))
+
+// // // // 23  Write a function to find the second maximum sum of two numbers in an array.
+// let arr23 = [1, 22, 13, 41, 55, 26, 7, 8, 9];
+// function secondMaxSum() {
+//     arr23.sort((a, b) => a - b);
+//     return arr23[arr23.length - 2] + arr23[arr23.length - 3];
+// }
+// console.log(secondMaxSum())
