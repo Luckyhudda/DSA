@@ -792,15 +792,23 @@ function shuffleArray(arr){
 
  return arr;
 };
-console.log(shuffleArray([1,2,3,4,5,6]));
+//console.log(shuffleArray([1,2,3,4,5,6]));
 
 // // // // 19  Write a function to flatten an array of nested arrays.
+function flattenArr(arr) {
+  
+  let answare = [];
 
-// let arr19 = [1, 2, 3, [4, 5, 6, [7, 8, 9]]];
-// function flattenArr() {
-//     return arr19.flat(2)
-// }
-// console.log(flattenArr());
+  for(let i = 0; i<arr.length;i++){
+    if(Array.isArray(arr[i])){
+      answare = answare.concat(flattenArr(arr[i]))
+    }else{
+      answare.push(arr[i])
+    }
+  }
+return answare;
+}
+console.log(flattenArr([1, 2, 3, [4, 5, 6, [7, 8, 9]]]));
 
 // // // // 20  Write a function to find the second largest number in an array.
 // let arr20 = [1, 2, 3, 4, 5, 26, 7, 8, 9, 11, 12, 13, 15];
