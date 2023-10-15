@@ -920,102 +920,42 @@ function findOdd(arr) {
 }
 //console.log(findOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19]))
 
-// // // // 31  Write a function to calculate the distance between two points.
-// let num1 = 23;
-// let num2 = 32;
+// // // 44  Write a function to find the maximum occurring character in a string.
 
-// function calcDistance() {
-//     return num1 > num2 ? num1 - num2 : num2 - num1;
-// }
-// console.log(calcDistance())
 
-// // // // // 32  Write a function to calculate the area of a circle.
 
-// let r = 3; // r = radius of circle
-// let PI = 3.142857142857143
+function maxOccurring(str){
 
-// function calcAreaOfCercle() {
-//     area = PI * (r * r)
-//     return ` The area of circle is ${area.toFixed(2)}`
-// }
-// console.log(calcAreaOfCercle())
+  const charStore = {};
+  let maxOccur = 0;
 
-// // // // // 33  Write a function to calculate the perimeter of a circle.
-// let radius = 3;
-// let pi = 3.142857142857143
+  for(let i = 0; i<str.length;i++){
+    if(str[i] !== ' '){
+      charStore[str[i]] = (charStore[str[i]] || 0) + 1;
+    }
+  }
 
-// function calcPerimeterOfCercle() {
-//     let perimeter = 2 * pi * radius
-//     return ` The perimeter of circle is ${perimeter.toFixed(2)}`
-// }
-// console.log(calcPerimeterOfCercle());
+  for(let n in charStore){
+   if(charStore[n] > maxOccur){
+    maxOccur = charStore[n];
+   }
+  }
+ return maxOccur
 
-// // // // 34  Write a function to calculate the area of a rectangle.
+};
+console.log(maxOccurring('hello world'));
 
-// function areaOfRectangle(width, length) {
-//     let area = width * length;
-//     return ` Area of rectangle is ${area}`
-// }
-// console.log(areaOfRectangle(4, 5))
 
-// // // // 35   Write a function to calculate the perimeter of a rectangle.
-// function perimeterOfRectangle(width, length) {
-//     perimeter = 2 * (width + length);
-//     return ` The perimeter of rectangle is ${perimeter}`
-// }
-// console.log(perimeterOfRectangle(2, 3))
 
-// // // // 36  Write a function to calculate the area of a triangle.
-// function areaOfTriangle(base, height) {
-//     let area = 1 / 2 * (base * height);
-//     return ` The area of Triangle is ${area}`
-// }
-// console.log(areaOfTriangle(4, 6));
 
-// // area when all sides are given....
-// let side1 = 3;
-// let side2 = 4;
-// let side3 = 5;
-// let s = (side1 + side2 + side3) / 2;
 
-// function triangleArea() {
-//     area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
-//     return ` Area of Triangle is ${area}`
-// }
-// console.log(triangleArea())
 
-// // // // 37  Write a function to calculate the perimeter of a triangle.
-// let s1 = 2;
-// let s2 = 7;
-// let s3 = 8;
-
-// function perimeterOfTriangle() {
-//     if ((s1 + s2) < s3) {
-//         return ` Invalid input : make sure (Side1 + Side2) > Side3`
-//     }
-//     return `The perimeter of triangle is : ${(s1+s2+s3)}`;
-// }
-// console.log(perimeterOfTriangle())
-
-// // // // 38  Write a function to check if a given year is a leap year or not.
-
-// let Year = 2024;
-
-// function leapYear(){
-//  if((Year % 4 ===0) && (Year % 100 !==0) || Year % 400 ==0){
-//     return `${Year} is a leap Year`
-//  }
-//  return `${Year} is not a leap Year`
-// }
-// console.log(leapYear())
 
 // // // 39  Write a function to convert a number to Roman numerals.
 // // // 40  Write a function to convert a Roman numeral to a number.
 // // // 41  Write a function to generate all possible permutations of a given string.
 // // // 42  Write a function to generate all possible combinations of a given string.
 // // // 43  Write a function to find the first non-repeating character in a string.
-// // // 44  Write a function to find the maximum occurring character in a string.
-// // // 45  Write a function to count the number of vowels in a string.
 
 // let vowelStr = 'javascript';
 // let count = 0;
