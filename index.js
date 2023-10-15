@@ -1,3 +1,4 @@
+"use strict";
 // Prime number.......
 
 function isPrime(num) {
@@ -829,41 +830,54 @@ function findUnion(arr1, arr2) {
 
 // // // // 26  Write a function to find the difference of two arrays...
 
-function findDifference(arr1,arr2){
-   const tracker = {};
-   const result = []
+function findDifference(arr1, arr2) {
+  const tracker = {};
+  const result = [];
 
-   for(let i = 0; i<arr2.length;i++){
+  for (let i = 0; i < arr2.length; i++) {
     tracker[arr2[i]] = true;
-   }
+  }
 
-   for(let i = 0; i<arr1.length;i++){
-    if(!tracker[arr1[i]]){
+  for (let i = 0; i < arr1.length; i++) {
+    if (!tracker[arr1[i]]) {
       result.push(arr1[i]);
     }
-   }
-   return result;
+  }
+  return result;
 }
 // console.log(findDifference([1, 2, 3, 4, 5, 6, 7, 8, 9, 9], [2, 4, 6, 7, 9, 0, 11]))
 
 // // // // 27  Write a function to sort an array in ascending order.
 
-// let arr27 = [1, 3, 2, 4, 6, 5, 8, 0, 9, 7];
+function ascendingOrder(arr) {
+  if (arr.length <= 0) {
+    return arr;
+  }
 
-// function ascendingOrder() {
-//     arr27.sort((a, b) => a - b);
-//     return arr27;
-// }
-// console.log(ascendingOrder())
+  let pivot = arr[arr.length - 1];
+  let left = [];
+  let right = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
+    }
+    if (arr[i] > pivot) {
+      right.push(arr[i]);
+    }
+  }
+
+  return [...ascendingOrder(left), pivot, ...ascendingOrder(right)];
+}
+//console.log(ascendingOrder([1, 3, 2, 4, 6, 5, 8, 0, 9, 7]));
 
 // // // // // 28  Write a function to sort an array in descending order.
-// let arr28 = [1, 3, 2, 4, 6, 5, 8, 0, 9, 7];
+let arr28 = [1, 3, 2, 4, 6, 5, 8, 0, 9, 7];
 
-// function descendingOrder() {
-//     arr28.sort((a, b) => b - a);
-//     return arr28;
-// }
-// console.log(descendingOrder())
+function descendingOrder(arr) {
+  
+}
+console.log(descendingOrder([1, 3, 2, 4, 6, 5, 8, 0, 9, 7]));
 
 // // // // 29  Write a function to filter out all even numbers from an array.
 
