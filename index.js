@@ -943,8 +943,29 @@ function maxOccurring(str){
  return maxOccur
 
 };
-console.log(maxOccurring('hello world'));
+// console.log(maxOccurring('hello world'));
 
+// // // 43  Write a function to find the first non-repeating character in a string.
+
+function nonRepeating(str){
+ const charStore = {};
+
+ for (let i = 0; i < str.length; i++) {
+   if (str[i] !== " ") {
+     charStore[str[i]] = (charStore[str[i]] || 0) + 1;
+   }
+ }
+
+ for (let n in charStore) {
+   if (charStore[n] == 1) {
+     return n;
+   }
+ }
+ return null;
+
+};
+console.log(nonRepeating('hello world')); // H
+console.log(nonRepeating('kaka'));   // Null
 
 
 
@@ -955,7 +976,6 @@ console.log(maxOccurring('hello world'));
 // // // 40  Write a function to convert a Roman numeral to a number.
 // // // 41  Write a function to generate all possible permutations of a given string.
 // // // 42  Write a function to generate all possible combinations of a given string.
-// // // 43  Write a function to find the first non-repeating character in a string.
 
 // let vowelStr = 'javascript';
 // let count = 0;
