@@ -875,54 +875,50 @@ function ascendingOrder(arr) {
 let arr28 = [1, 3, 2, 4, 6, 5, 8, 0, 9, 7];
 
 function descendingOrder(arr) {
-   if (arr.length <= 0) {
-     return arr;
-   }
+  if (arr.length <= 0) {
+    return arr;
+  }
 
-   let pivot = arr[arr.length - 1];
-   let left = [];
-   let right = [];
+  let pivot = arr[arr.length - 1];
+  let left = [];
+  let right = [];
 
-   for (let i = 0; i < arr.length - 1; i++) {
-     if (arr[i] < pivot) {
-       right.push(arr[i]);
-     }
-     if (arr[i] > pivot) {
-       left.push(arr[i]);
-     }
-   }
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      right.push(arr[i]);
+    }
+    if (arr[i] > pivot) {
+      left.push(arr[i]);
+    }
+  }
 
-   return [...descendingOrder(left), pivot, ...descendingOrder(right)];
+  return [...descendingOrder(left), pivot, ...descendingOrder(right)];
 }
 //console.log(descendingOrder([1, 3, 2, 4, 6, 5, 8, 0, 9, 7]));
 
 // // // // 29  Write a function to filter out all even numbers from an array.
-
-// let arr29 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19];
-// let evenList = []
-// function findEven() {
-//     for (let i = 0; i < arr29.length; i++) {
-//         if (arr29[i] % 2 === 0) {
-//             evenList.push(arr29[i])
-//         }
-//     }
-//     return evenList;
-// }
-// console.log(findEven())
+function findEven(arr) {
+  let evenList = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenList.push(arr[i]);
+    }
+  }
+  return evenList;
+}
+//console.log(findEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16]));
 
 // // // // 30 Write a function to filter out all odd numbers from an array.
-
-// let arr30 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19];
-// let oddList = [];
-// function findOdd() {
-//     for (let i = 0; i < arr30.length; i++) {
-//         if (arr30[i] % 2 !== 0) {
-//             oddList.push(arr30[i])
-//         }
-//     }
-//     return oddList
-// }
-// console.log(findOdd())
+function findOdd(arr) {
+  let oddList = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            oddList.push(arr[i])
+        }
+    }
+    return oddList
+}
+//console.log(findOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19]))
 
 // // // // 31  Write a function to calculate the distance between two points.
 // let num1 = 23;
