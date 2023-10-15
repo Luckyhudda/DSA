@@ -875,9 +875,26 @@ function ascendingOrder(arr) {
 let arr28 = [1, 3, 2, 4, 6, 5, 8, 0, 9, 7];
 
 function descendingOrder(arr) {
-  
+   if (arr.length <= 0) {
+     return arr;
+   }
+
+   let pivot = arr[arr.length - 1];
+   let left = [];
+   let right = [];
+
+   for (let i = 0; i < arr.length - 1; i++) {
+     if (arr[i] < pivot) {
+       right.push(arr[i]);
+     }
+     if (arr[i] > pivot) {
+       left.push(arr[i]);
+     }
+   }
+
+   return [...descendingOrder(left), pivot, ...descendingOrder(right)];
 }
-console.log(descendingOrder([1, 3, 2, 4, 6, 5, 8, 0, 9, 7]));
+//console.log(descendingOrder([1, 3, 2, 4, 6, 5, 8, 0, 9, 7]));
 
 // // // // 29  Write a function to filter out all even numbers from an array.
 
