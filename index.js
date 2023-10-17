@@ -999,21 +999,6 @@ function fibSeriesUsingForLoop(num){
 };
 // console.log(fibSeriesUsingForLoop(7));
 
-// //  09  Write a program to check if a given number is a perfect number using a for loop.
-// // perfect Numbers => 6,28,496,8128....
-// let perfectNum = 28;
-// let totalOf = 0
-// for(let i = 1; i <perfectNum; i++){
-//     if(perfectNum % i ===0){
-//         totalOf += i
-//     }
-// } if(totalOf ===perfectNum){
-//     console.log(`${perfectNum} is a perfect number`)
-// }else{
-//     console.log(`${perfectNum} is not a perfect number`)
-// }
-
-// //  10  Write a program to find the sum of digits of a given number using a while loop.
 
 // //  11  Write a program to reverse a given number using a while loop.
 
@@ -1097,30 +1082,6 @@ function fibSeriesUsingForLoop(num){
 // // // // 09  Write a program to use Promise.any to execute multiple promises concurrently and return the result of the first one that resolves, ignoring any rejections.
 // // // // 10  Write a program to use Promise.allSettled to execute multiple promises concurrently and return an array of their results, whether they resolved or rejected.
 
-// // Q. WAP to swap the two numbers without using a third variable
-
-// let num1 = 12;
-// let num2 = 21;
-
-// function swapNum(num1,num2){
-//     [num1,num2] = [num2,num1]
-//     return `num1 = ${num1}, \nnum2 = ${num2}`
-// }
-// console.log(swapNum(num1,num2));
-// console.log(swapNum(1,2));
-
-// // Q. WAP to find the largest and smallest numbers among the three.
-
-// let numOne = 12;
-// let numTow = 21;
-// let numThree = 45;
-
-// function largSmall(num1,num2,num3){
-//    let largest = (num1 > num2) ? (num1 > num3) ? num1 : num3 : (num2 > num3) ? num2 : num3
-//    let smallest =  (num1 < num2) ? (num1 < num3) ? num1 : num3 : (num2 < num3) ? num2 : num3
-
-//    return `largest num is ${largest}, \nsmallest num is ${smallest}`
-// }
 
 // console.log(largSmall(numOne,numTow,numThree));
 // console.log(largSmall(3,2,1));
@@ -1951,3 +1912,6 @@ function fibSeriesUsingForLoop(num){
 // // 47  Write a function to find the length of the longest consecutive sequence in an array of numbers.
 // // 48  Write a function to find the length of the longest increasing subarray in an array of numbers.
 // // 49  Write a function to find the length of the longest decreasing subarray in an array of numbers.
+
+
+// //  10  Write a program to find the sum of digits of a given number using a while loop.
