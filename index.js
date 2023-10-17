@@ -985,38 +985,19 @@ function factUsingForLoop(num){
 
 // // // //  07  Write a program to print the Fibonacci series up to a given number using a for loop.
 // // Fibonacci series 0,1,1,2,3,5,8,13,21,34,55.....
-//  let fibNum = 14;
-// let n1 = 0;
-// let n2 =1;
-// let nextTerm ;
-//  for(let i =1; i<= fibNum;i++){
-//      console.log(n1)
-//     nextTerm = n1 + n2;
-//     n1 = n2;
-//     n2 = nextTerm;
-// }
 
-// //  08  Write a program to check if a given number is a prime number using a for loop.
+function fibSeriesUsingForLoop(num){
+ let result =[0,1];
 
-// let primeNum = 23;
-// let resultPrime = true;
+ for(let i = 2;i<num;i++){
+  result.push((result[i-1] ) + (result[i-2]))
+ }
 
-// if (primeNum === 1) {
-//     console.log(` 1 is neither prime  nor composite number! `)
-// } if (primeNum < 1) {
-//     console.log(`${primeNum} is not a prime number`)
-// } else if (primeNum > 1) {
-//     for (let i = 2; i < primeNum; i++) {
-//         if (primeNum % i === 0) {
-//             resultPrime = false;
-//         }
-//     }
-//     if (resultPrime) {
-//         console.log(`${primeNum} is a prime number`)
-//     } else {
-//         console.log(`${primeNum} is not a prime number`)
-//     }
-// }
+ return result
+
+
+};
+// console.log(fibSeriesUsingForLoop(7));
 
 // //  09  Write a program to check if a given number is a perfect number using a for loop.
 // // perfect Numbers => 6,28,496,8128....
