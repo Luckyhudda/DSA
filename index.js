@@ -964,100 +964,24 @@ function nonRepeating(str){
  return null;
 
 };
-console.log(nonRepeating('hello world')); // H
-console.log(nonRepeating('kaka'));   // Null
+// console.log(nonRepeating('hello world')); // H
+// console.log(nonRepeating('kaka'));   // Null
 
 
-
-
-
-
-// // // 39  Write a function to convert a number to Roman numerals.
-// // // 40  Write a function to convert a Roman numeral to a number.
-// // // 41  Write a function to generate all possible permutations of a given string.
-// // // 42  Write a function to generate all possible combinations of a given string.
-
-// let vowelStr = 'javascript';
-// let count = 0;
-// function countVowel(){
-//   let vowel = ['a','e','i','o','u'];
-//  for(let i of vowelStr){
-//     if(vowel.includes(i)){
-//         count++
-//     }
-//  }
-//  return count;
-// }
-// console.log(countVowel(vowelStr));
-
-// // // // 46  Write a function to count the number of consonants in a string.
-
-// let consonantsStr = 'javascript';
-// let resultCount = 0;
-
-// function countConsonant(){
-//     let vowel = ['a','e','i','o','u']
-//     for(let i of consonantsStr){
-//         if(!vowel.includes(i)){
-//             resultCount++
-//         }
-//     }
-//     return resultCount
-// }
-// console.log(countConsonant())
-
-// // 47  Write a function to find the length of the longest consecutive sequence in an array of numbers.
-// // 48  Write a function to find the length of the longest increasing subarray in an array of numbers.
-// // 49  Write a function to find the length of the longest decreasing subarray in an array of numbers.
-// // 50  Write a function to find the number of occurrences of a given element in an array.
-
-// // Looping is a crucial concept in JavaScript, and here are some common problems that can be solved using loops:
-// // 01  Write a program to print the numbers from 1 to 10 using a for loop.
-
-// for (let i = 1; i <= 10; i++) {
-//     console.table(i)
-// }
-
-// // 02 Write a program to print the even numbers between 1 and 20 using a for loop.
-
-// for (let i = 1; i <= 20; i++) {
-//     if(i %2 === 0){
-//         console.log(i)
-//     }
-// }
-
-// // 03 Write a program to print the odd numbers between 1 and 20 using a for loop.
-
-// for (let i = 1; i <= 20; i++) {
-//     if(i %2 !== 0){
-//         console.log(i)
-//     }
-// }
-
-// // 04 Write a program to print the sum of numbers from 1 to 10 using a for loop.
-
-// let summ = 0;
-// for (let i = 0; i <= 10; i++) {
-//     summ += i;
-
-// } console.log(summ)
-
-// // 05 Write a program to print the product of numbers from 1 to 10 using a for loop.
-
-// let productOfNum = 1;
-// for (let i = 1; i <= 10; i++) {
-//     productOfNum *= i;
-
-// } console.log(productOfNum)
 
 // // 06 Write a program to find the factorial of a given number using a for loop.
-// let givenNum = 5;
-// factorial = 1;
 
-// for (let i = 1; i <= givenNum; i++) {
-//     factorial *= i
+function factUsingForLoop(num){
 
-// } console.log(factorial)
+  let factorial = 1;
+  for(let i = 1;i<= num;i++){
+    factorial *= i;
+  }
+
+  return factorial;
+};
+// console.log(factUsingForLoop(5));
+
 
 // // // //  07  Write a program to print the Fibonacci series up to a given number using a for loop.
 // // Fibonacci series 0,1,1,2,3,5,8,13,21,34,55.....
@@ -2037,3 +1961,12 @@ console.log(nonRepeating('kaka'));   // Null
 //     return arr23[arr23.length - 2] + arr23[arr23.length - 3];
 // }
 // console.log(secondMaxSum())
+// // // 39  Write a function to convert a number to Roman numerals.
+// // // 40  Write a function to convert a Roman numeral to a number.
+// // // 41  Write a function to generate all possible permutations of a given string.
+// // // 42  Write a function to generate all possible combinations of a given string.
+
+
+// // 47  Write a function to find the length of the longest consecutive sequence in an array of numbers.
+// // 48  Write a function to find the length of the longest increasing subarray in an array of numbers.
+// // 49  Write a function to find the length of the longest decreasing subarray in an array of numbers.
