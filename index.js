@@ -1053,22 +1053,23 @@ function countObjProperties(obj) {
 // console.log(countObjProperties({'name':'Lucky','age':22}));
 
 
-// // // // Write a program to merge two objects.
-// // // // Write a program to clone an object.
-// // // // Write a program to get the keys of an object as an array.
 // // // // Write a program to create an object from two arrays.
-// // // // Write a program to convert an object to an array of key-value pairs.
-// // // // Write a program to sort an array of objects by a specific property.
-// // // // Write a program to filter an array of objects based on a specific property value.
-// // // // Write a program to group an array of objects by a specific property value.
-// // // // Write a program to check if two objects are equal or not.
-// // // // Write a program to get the maximum value in an object.
-// // // // Write a program to get the minimum value in an object.
-// // // // Write a program to get the sum of all values in an object.
-// // // // Write a program to find the average value of all properties in an object.
-// // // // Write a program to find the median value of all properties in an object.
-// // // // Write a program to find the mode value of all properties in an object.
-// // // // Write a program to calculate the standard deviation of all properties in an object.
+
+function createObj(key,value){
+
+  const obj = {};
+  for(let i = 0; i<value.length;i++){
+   if(i<value.length){
+    obj[key[i]] = value[i];
+   }else{
+    obj[key] = null;
+   }
+  }
+return obj;
+}
+// console.log(createObj(['name','age','email'],['lucky',22,'lucky@gmail.com']));
+
+
 
 // // // // Here are some common promises-related problem-solving questions in JavaScript:
 // // // // 01  Write a program to create a promise that resolves after a given amount of time.
@@ -1082,259 +1083,14 @@ function countObjProperties(obj) {
 // // // // 09  Write a program to use Promise.any to execute multiple promises concurrently and return the result of the first one that resolves, ignoring any rejections.
 // // // // 10  Write a program to use Promise.allSettled to execute multiple promises concurrently and return an array of their results, whether they resolved or rejected.
 
-// console.log(largSmall(numOne,numTow,numThree));
-// console.log(largSmall(3,2,1));
-
-// // WAP finds out if any year is a leap year or not.
-
-// let year = 2024;
-
-// function leapYear(year){
-//     if((year % 4 === 0 || year % 100 === 0) || (year % 400 === 0)){
-//         return `${year} is a leapYear`
-//     }
-//     return `${year} is Not a leapYear`
-// }
-// console.log(leapYear(year));
-// console.log(leapYear(2023));
-
-// // // [13:30] Tarun
-
-// // Q. WAP to return the absolute number of a given input
-
-// // Example:
-// // Input1 - 15
-// // Output - 15
-// // Input2 - -4
-// // Output - 4
-
-// let absIn = 15;
-// function absValue(n){
-//    if(n<0){
-//     return -1 * n
-//    }
-//    return n
-// }
-// console.log(absValue(absIn));
-
-// // Q. WAP to create a result mark sheet that has 5 subjects. Need to print as an output:
-// // Name of student
-// // Marks in all 5 subjects
-// // Total Marks
-// // Percentage
-// // Division as
-// // more than 75% -- Distinction
-// // 60% - 75% -- 1 Div
-// // 50% - 60% -- 2 Div
-// // 33% - 50% -- 3 Div
-// // 0 - 33% -- Failed
-
-// let studentName = 'Lucky Hudda'
-// let marks = [70,50,80,60,99]
-// function markSheet(stuName,math,history, hindi, english, computer){
-//    let  totalMark = math + history + hindi + english + computer;
-//     let Percentage = (totalMark * 100) / 500
-//     let Division;
-//     if(Percentage > 0 && Percentage <33){
-//      Division = 'Failed'
-//     }
-//     if(Percentage > 33 && Percentage <50){
-//       Division = '3 Div'
-//     }
-//     if(Percentage > 50 && Percentage <60){
-//       Division = '2 Div'
-//     }
-//     if(Percentage > 60 && Percentage <70){
-//       Division = '1 Div'
-//     }
-//     if(Percentage > 75){
-//       Division = 'Distinction'
-//     }
-
-//     return `Student Name : ${stuName} \nPercentage : ${Percentage}% \nDivision: ${Division}`
-// }
-// console.log(markSheet(studentName,...marks));
 
 // //Q. WAP to calculate the HCF of any two numbers
-
-// let num_1 = 45;
-// let num_2 = 12;
-
-// function findHCF(num1,num2){
-//     let n = num1 > num2 ? num1 : num2;
-//     let finalHcf =1;
-//     for(let i = 0; i<=n;i++){
-//         if(num1 % i === 0 && num2 % i === 0){
-//             finalHcf = i
-//         }
-
-//     }
-//     return finalHcf;
-// }
-// console.log(findHCF(num_1,num_2));
-// // // Q. WAP to calculate the factorial of any number.
-// // Example
-// // Input - 5 Output - 120
-
-// let inp = 5;
-
-// function factorial(num){
-//     if(num===0 || num === 1){
-//         return 1;
-//     }
-//     return num * factorial(num-1)
-// }
-// console.log(factorial(inp));
-
-// // / Q. WAP to return the count of digits for an input.
-// // Input - 123     Output - 3
-// let digit = 123;
-
-// function countDigit(n){
-// return n.toString().length
-// }
-// console.log(countDigit(digit));
-
-// // Q. WAP to check if any number is a palindrome number
-// // Palindrome Number - when the reverse number is the same as the original number.
-// // Example
-// // Input -121
-// // Output - true
-// // Input - 123
-// // Output - false
-
-// let pNum = 121;
-//  function palindromeNum(num){
-//     let  a = num.toString().split('').reverse().join('');
-//     a = Number(a)
-
-//      if(a === num){
-//          return true
-//      } return false
-//  }
-//  console.log(palindromeNum(pNum));
-
-// // Q. WAP to check given number is an Armstrong number or not.
-// // Armstrong number - It is a number that is equal to the sum of cubes of its digits.
-// // Example:
-// // Input1 - 153
-// // Output - true
-// // Input2 - 256
-// // Output - false
-
-// let givinNum = 153;
-
-// function ArmstrongNum(n){
-//     let sum = 0
-//     let arr = n.toString().split('')
-//     for(let i = 0; i<arr.length;i++){
-//         sum += Math.pow(arr[i],3)
-//     }
-//     if(sum === n){
-//         return true
-//     }
-//     return false
-
-// }
-// console.log(ArmstrongNum(givinNum));
-// // 01 Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
-// const returnTrue = function(x,y){
-//  if((x ===50 || y === 50) || (x  + y == 50)){
-//     return true
-//  }
-//  return false
-// }
-// console.log(returnTrue(21,30));
-// console.log(returnTrue(21,29));
-// console.log(returnTrue(21,50));
-
-// // 02 Write a  #JavaScript program to determine whether a given year is a leap year ?
-
-// let givenYear = 2023;
-// let givenYear2 = 2024;
-
-// const leapYear = function(year){
-//   if((year % 4 === 0 && year % 100 !== 0)|| (year % 400 === 0)){
-//     return `${year} is a leap year`;
-// }
-// return `${year} is not a leap year`;
-// }
-// console.log(leapYear(givenYear));
-// console.log(leapYear(givenYear2));
 
 // // 03 Write a #JavaScript program to find which 1st January is a Sunday between 2014 and 2050.
 // // 04 Write a #JavaScript program to calculate the number of days left until next Christmas.
 // // 05 Write a #JavaScript program to convert temperatures to and from Celsius and Fahrenheit.
-// // 06 Write a #JavaScript program to check if two numbers are in the range 40..60 or in the range 70..100 inclusive.
-
-// let numA = 55;
-// let numB = 44;
-
-// function rangeOfTwoNumber(num1, num2){
-//     if((num1 >= 40 && num1 <= 60) && (num2 >= 40 && num2 <= 60)){
-//         return `${num1} & ${num2} are in the range 40...60`
-//     } else if((num1 >= 70 && num1 <= 100) && (num2 >= 70 && num2 <= 100)){
-//         return `${num1} & ${num2} are in the range 70...100`
-//     }else {
-//         return `${num1} & ${num2} are Out of range`
-//     }
-// }
-// console.log(rangeOfTwoNumber(numA, numB));
 
 // // 07 Write a #JavaScript program to check if the last digit of the three given positive integers is the same.
-
-// // 09 Write a #JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.
-
-// let specifiedNum = 122;
-// let fixedNum = 19;
-
-// function diffOfNum(num, fixed){
-//     if(num < 0){
-//         return `Please Enter a Positive Number`;
-//     } else if(num - fixed > fixed){
-//         let diff = (num - fixed) * 3
-//         return `Triple their absolute difference is ${diff}`
-//     } else{
-//         return `absolute difference is less then ${fixed} `
-//     }
-// }
-// console.log(diffOfNum(specifiedNum, fixedNum));
-
-// // 10 Write a #JavaScript program to check a given integer is within 20 of 100 or 400
-
-// // 11  Write a #JavaScript program to check from two given integers, if one is positive and one is negative.
-
-// let intONe = 22;
-// let intTwo = -23;
-
-// function checkBoth(num1, num2){
-//     if(num1> 0 && num2 > 0){
-//         return `Number ${num1} & ${num2} are positive`;
-//     } else if (num1< 0 && num2 < 0){
-//         return `Number ${num1} & ${num2} are negative`;
-
-//     }else {
-//         let a = num1 > 0 ? 'positive' : 'negative';
-//         let b = num2 > 0 ? 'positive' : 'negative';
-
-//         return `${num1} is a ${a} Number & ${num2} is a ${b} Number`
-//     }
-// }
-// console.log(checkBoth(intONe, intTwo));
-
-//  // 12 Write a #JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
-
-// let firstStr = "pysic";
-
-// function frontStr(str){
-//      if(str[0] ==='p' && str[1] === 'y'){
-//         return str
-//      }else{
-//         return 'py' + str
-//      }
-// }
-// console.log(frontStr(firstStr));
-
 // // // 13 Write a #JavaScript program to remove a character at the specified position of a given string and return the new string.
 
 // // const str = 'my name is lucky hudda';
@@ -1356,32 +1112,6 @@ function countObjProperties(obj) {
 //   }
 // }
 // console.log(ReplaceChar(charStr));
-
-// // // 15 Write a #JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.
-
-// let givnStr = 'LuckyHudda';
-
-// function addInBothSide(str){
-//   return str[0] + str + str[0]
-// }
-// console.log(addInBothSide(givnStr));
-
-// // 16 Write a #JavaScript program to check if a given positive number is a multiple of 3 or a multiple of 7.
-
-// let number = 9;
-// let number2 = 19;
-
-// const trueMultiple = function(num){
-//  if(num > 0){
-//     if(num % 3 === 0 || num % 7=== 0){
-//         return true
-//     }
-//     return false
-//  }
-//  else return `Please provide a positive number`
-// }
-// console.log(trueMultiple(number))
-// console.log(trueMultiple(number2))
 
 // // // 17 Write a #JavaScript program to create a new string from a given string taking the last 3 characters and adding at both the front and back. The string length must be 3 or more.
 
