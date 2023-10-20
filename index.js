@@ -911,131 +911,132 @@ function findEven(arr) {
 // // // // 30 Write a function to filter out all odd numbers from an array.
 function findOdd(arr) {
   let oddList = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 !== 0) {
-            oddList.push(arr[i])
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      oddList.push(arr[i]);
     }
-    return oddList
+  }
+  return oddList;
 }
 //console.log(findOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19]))
 
 // // // 44  Write a function to find the maximum occurring character in a string.
 
-
-
-function maxOccurring(str){
-
+function maxOccurring(str) {
   const charStore = {};
   let maxOccur = 0;
 
-  for(let i = 0; i<str.length;i++){
-    if(str[i] !== ' '){
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
       charStore[str[i]] = (charStore[str[i]] || 0) + 1;
     }
   }
 
-  for(let n in charStore){
-   if(charStore[n] > maxOccur){
-    maxOccur = charStore[n];
-   }
+  for (let n in charStore) {
+    if (charStore[n] > maxOccur) {
+      maxOccur = charStore[n];
+    }
   }
- return maxOccur
-
-};
+  return maxOccur;
+}
 // console.log(maxOccurring('hello world'));
 
 // // // 43  Write a function to find the first non-repeating character in a string.
 
-function nonRepeating(str){
- const charStore = {};
+function nonRepeating(str) {
+  const charStore = {};
 
- for (let i = 0; i < str.length; i++) {
-   if (str[i] !== " ") {
-     charStore[str[i]] = (charStore[str[i]] || 0) + 1;
-   }
- }
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      charStore[str[i]] = (charStore[str[i]] || 0) + 1;
+    }
+  }
 
- for (let n in charStore) {
-   if (charStore[n] == 1) {
-     return n;
-   }
- }
- return null;
-
-};
+  for (let n in charStore) {
+    if (charStore[n] == 1) {
+      return n;
+    }
+  }
+  return null;
+}
 // console.log(nonRepeating('hello world')); // H
 // console.log(nonRepeating('kaka'));   // Null
 
-
-
 // // 06 Write a program to find the factorial of a given number using a for loop.
 
-function factUsingForLoop(num){
-
+function factUsingForLoop(num) {
   let factorial = 1;
-  for(let i = 1;i<= num;i++){
+  for (let i = 1; i <= num; i++) {
     factorial *= i;
   }
 
   return factorial;
-};
+}
 // console.log(factUsingForLoop(5));
-
 
 // // // //  07  Write a program to print the Fibonacci series up to a given number using a for loop.
 // // Fibonacci series 0,1,1,2,3,5,8,13,21,34,55.....
 
-function fibSeriesUsingForLoop(num){
- let result =[0,1];
+function fibSeriesUsingForLoop(num) {
+  let result = [0, 1];
 
- for(let i = 2;i<num;i++){
-  result.push((result[i-1] ) + (result[i-2]))
- }
+  for (let i = 2; i < num; i++) {
+    result.push(result[i - 1] + result[i - 2]);
+  }
 
- return result
-
-
-};
+  return result;
+}
 // console.log(fibSeriesUsingForLoop(7));
 
-
 // // // // Write a program to check if a given array is sorted in ascending order or not.
-function isSortedAscending(arr){
-
-  for(let i = 0; i<arr.length-1;i++){
-    if(arr[i] > arr[i+1]){
+function isSortedAscending(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
       return false;
     }
   }
-return true;
-};
+  return true;
+}
 // console.log(isSortedAscending([1,2,3,14,5,6]));
 
-
 // // // // Write a program to check if a given array is sorted in descending order or not.
-function isSortedDescending(arr){
-
-  for(let i = 0; i<arr.length-1;i++){
-    if(arr[i] < arr[i+1]){
+function isSortedDescending(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < arr[i + 1]) {
       return false;
     }
   }
-return true;
-};
+  return true;
+}
 // console.log(isSortedDescending([6,5,4,3,2,1]));
 
-
-
-
-// // // // Write a program to find the intersection of two arrays.
-// // // // Write a program to find the union of two arrays.
-// // // // Write a program to find the difference of two arrays.
-// // // // Write a program to find the common elements between two arrays.
 // // // // Write a program to find the frequency of each element in an array.
-// // // // Write a program to find the maximum sum subarray in an array.
-// // // // Write a program to rotate an array by a given number of positions.
+
+function frequencyOfElement(arr) {
+  const obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    obj[arr[i]] = (obj[arr[i]] || 0) + 1;
+  }
+
+  return Object.entries(obj);
+}
+// console.log(
+//   frequencyOfElement(["a", "b", "c", "f", "a", "f", "f", "f", "a",'c'])
+// );
+
+
 // // // // Write a program to split an array into two parts from a specific index.
+
+function splitArray(arr,index){
+  if(arr.length <2) return arr;
+
+const partOne = arr.slice(0,index);
+const partTwo = arr.slice(index);
+
+return {partOne,partTwo}
+};
+// console.log(splitArray([1,2,3,4,5,6,7,8,9],3));
+
 // // // // Write a program to find the kth smallest element in an array.
 // // // // Write a program to find the kth largest element in an array.
 // // // // Write a program to shuffle the elements of an array.
@@ -1076,7 +1077,6 @@ return true;
 // // // // 08  Write a program to use the finally method to execute code after a promise resolves or rejects.
 // // // // 09  Write a program to use Promise.any to execute multiple promises concurrently and return the result of the first one that resolves, ignoring any rejections.
 // // // // 10  Write a program to use Promise.allSettled to execute multiple promises concurrently and return an array of their results, whether they resolved or rejected.
-
 
 // console.log(largSmall(numOne,numTow,numThree));
 // console.log(largSmall(3,2,1));
@@ -1903,15 +1903,11 @@ return true;
 // // // 41  Write a function to generate all possible permutations of a given string.
 // // // 42  Write a function to generate all possible combinations of a given string.
 
-
 // // 47  Write a function to find the length of the longest consecutive sequence in an array of numbers.
 // // 48  Write a function to find the length of the longest increasing subarray in an array of numbers.
 // // 49  Write a function to find the length of the longest decreasing subarray in an array of numbers.
 
-
 // //  10  Write a program to find the sum of digits of a given number using a while loop.
-
-
 
 // // //  16  Write a program to print a pattern of stars using a nested for loop.
 
@@ -1927,6 +1923,6 @@ return true;
 // }
 // console.log(startPattern(5));
 
-
+// // // // Write a program to find the maximum sum subarray in an array.
 // // // // Write a program to find the sum of two matrices.
 // // // // Write a program to multiply two matrices.
