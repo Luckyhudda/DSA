@@ -1024,31 +1024,35 @@ function frequencyOfElement(arr) {
 //   frequencyOfElement(["a", "b", "c", "f", "a", "f", "f", "f", "a",'c'])
 // );
 
-
 // // // // Write a program to split an array into two parts from a specific index.
 
-function splitArray(arr,index){
-  if(arr.length <2) return arr;
+function splitArray(arr, index) {
+  if (arr.length < 2) return arr;
 
-const partOne = arr.slice(0,index);
-const partTwo = arr.slice(index);
+  const partOne = arr.slice(0, index);
+  const partTwo = arr.slice(index);
 
-return {partOne,partTwo}
-};
+  return { partOne, partTwo };
+}
 // console.log(splitArray([1,2,3,4,5,6,7,8,9],3));
 
-// // // // Write a program to find the kth smallest element in an array.
-// // // // Write a program to find the kth largest element in an array.
-// // // // Write a program to shuffle the elements of an array.
-// // // // Write a program to find the first non-repeating element in an array.
-// // // // Write a program to find the subarray with the largest sum in an array.
-// // // // Write a program to find the subarray with the smallest sum in an array.
-
-// // // // Here are some common object-related problem-solving questions in JavaScript:
 // // // // Write a program to check if an object is empty.
+function isEmptyObj(obj) {
+  if (!Object.keys(obj).length) {
+    return true;
+  }
+  return false;
+}
+// console.log(isEmptyObj({ name: "raj" }));
+// console.log(isEmptyObj({}));
+
 // // // // Write a program to count the number of properties in an object.
-// // // // Write a program to check if an object contains a specific property.
-// // // // Write a program to get the values of all properties in an object as an array.
+function countObjProperties(obj) {
+  return Object.keys(obj).length;
+}
+// console.log(countObjProperties({'name':'Lucky','age':22}));
+
+
 // // // // Write a program to merge two objects.
 // // // // Write a program to clone an object.
 // // // // Write a program to get the keys of an object as an array.
@@ -1926,3 +1930,5 @@ return {partOne,partTwo}
 // // // // Write a program to find the maximum sum subarray in an array.
 // // // // Write a program to find the sum of two matrices.
 // // // // Write a program to multiply two matrices.
+// // // // Write a program to find the subarray with the largest sum in an array.
+// // // // Write a program to find the subarray with the smallest sum in an array.
