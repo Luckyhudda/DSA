@@ -1000,39 +1000,34 @@ function fibSeriesUsingForLoop(num){
 // console.log(fibSeriesUsingForLoop(7));
 
 
-// //  11  Write a program to reverse a given number using a while loop.
-
-// let givenNumerr = 341;
-// let revNum ;
-
-// let i = 0;
-// while(i < givenNumerr){
-//     let aRiv = givenNumerr.toString().split('').reverse().join('');
-//    revNum= +aRiv
-//     i++
-// }
-// console.log(revNum);
-
-// //  12  Write a program to check if a given number is a palindrome using a while loop.
-// // let pNum = 131;
-// // let palindromeNum;
-// // i = 0;
-// // while(i < pNum){
-// //   let reNum = pNum.toString().split('').reverse().join('');
-// //   console.log(reNum)
-// //   i++
-// // }
-
-// //  13  Write a program to find the GCD of two numbers using a while loop.
-// //  14  Write a program to find the LCM of two numbers using a while loop.
-// //  15  Write a program to print the multiplication table of a given number using a nested for loop.
-// //  16  Write a program to print a pattern of stars using a nested for loop.
-// //  17  Write a program to print the Pascal's triangle using a nested for loop.
-
-// // // // Write a program to find the sum of two matrices.
-// // // // Write a program to multiply two matrices.
 // // // // Write a program to check if a given array is sorted in ascending order or not.
+function isSortedAscending(arr){
+
+  for(let i = 0; i<arr.length-1;i++){
+    if(arr[i] > arr[i+1]){
+      return false;
+    }
+  }
+return true;
+};
+// console.log(isSortedAscending([1,2,3,14,5,6]));
+
+
 // // // // Write a program to check if a given array is sorted in descending order or not.
+function isSortedDescending(arr){
+
+  for(let i = 0; i<arr.length-1;i++){
+    if(arr[i] < arr[i+1]){
+      return false;
+    }
+  }
+return true;
+};
+// console.log(isSortedDescending([6,5,4,3,2,1]));
+
+
+
+
 // // // // Write a program to find the intersection of two arrays.
 // // // // Write a program to find the union of two arrays.
 // // // // Write a program to find the difference of two arrays.
@@ -1915,3 +1910,23 @@ function fibSeriesUsingForLoop(num){
 
 
 // //  10  Write a program to find the sum of digits of a given number using a while loop.
+
+
+
+// // //  16  Write a program to print a pattern of stars using a nested for loop.
+
+// function startPattern(numOfStart){
+//   let pattern = '';
+// for (let i = 1; i <= numOfStart; i++) {
+//   for (let j = 1; j <= i; j++) {
+//     pattern += "* ";
+//   }
+//   pattern += "\n";
+// }
+//   return pattern;
+// }
+// console.log(startPattern(5));
+
+
+// // // // Write a program to find the sum of two matrices.
+// // // // Write a program to multiply two matrices.
