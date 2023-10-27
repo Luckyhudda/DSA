@@ -1083,20 +1083,18 @@ const removeChr = function (str, position) {
 
   return newStr;
 };
-console.log(removeChr("lucky hudda", 2));
+// console.log(removeChr("lucky hudda", 2));
 
 // // 14  Write a #JavaScript program to create a new string from a given string changing the position of the first and last characters. The string length must be greater than or equal to 2
 
-// let charStr = 'f';
-
-// function ReplaceChar(str){
-//   if(str.length < 2){
-//     return `Plese provide a valid String`
-//   } else{
-//      return ` ...Loading`
-//   }
-// }
-// console.log(ReplaceChar(charStr));
+function ReplaceChar(str) {
+  if (str.length < 2) {
+    return `Please provide a valid string with length greater than or equal to 2.`;
+  } else {
+    return str[str.length - 1] + str.slice(1, -1) + str[0];
+  }
+}
+console.log(ReplaceChar("Lucky"));
 
 // // // 17 Write a #JavaScript program to create a new string from a given string taking the last 3 characters and adding at both the front and back. The string length must be 3 or more.
 
