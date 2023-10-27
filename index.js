@@ -1052,53 +1052,38 @@ function countObjProperties(obj) {
 }
 // console.log(countObjProperties({'name':'Lucky','age':22}));
 
-
 // // // // Write a program to create an object from two arrays.
 
-function createObj(key,value){
-
+function createObj(key, value) {
   const obj = {};
-  for(let i = 0; i<value.length;i++){
-   if(i<value.length){
-    obj[key[i]] = value[i];
-   }else{
-    obj[key] = null;
-   }
+  for (let i = 0; i < value.length; i++) {
+    if (i < value.length) {
+      obj[key[i]] = value[i];
+    } else {
+      obj[key] = null;
+    }
   }
-return obj;
+  return obj;
 }
 // console.log(createObj(['name','age','email'],['lucky',22,'lucky@gmail.com']));
 
-
-
-// // // // Here are some common promises-related problem-solving questions in JavaScript:
-// // // // 01  Write a program to create a promise that resolves after a given amount of time.
-// // // // 02  Write a program to chain promises.
-// // // // 03  Write a program to handle errors in a promise chain.
-// // // // 04  Write a program to use Promise.all to execute multiple promises concurrently.
-// // // // 05  Write a program to use Promise.race to execute multiple promises concurrently and return the result of the first one that resolves.
-// // // // 06  Write a program to use async/await to handle promises in a synchronous-looking way.
-// // // // 07  Write a program to use Promise.resolve and Promise.reject to create resolved and rejected promises, respectively.
-// // // // 08  Write a program to use the finally method to execute code after a promise resolves or rejects.
-// // // // 09  Write a program to use Promise.any to execute multiple promises concurrently and return the result of the first one that resolves, ignoring any rejections.
-// // // // 10  Write a program to use Promise.allSettled to execute multiple promises concurrently and return an array of their results, whether they resolved or rejected.
-
-
-// //Q. WAP to calculate the HCF of any two numbers
-
-// // 03 Write a #JavaScript program to find which 1st January is a Sunday between 2014 and 2050.
-// // 04 Write a #JavaScript program to calculate the number of days left until next Christmas.
-// // 05 Write a #JavaScript program to convert temperatures to and from Celsius and Fahrenheit.
-
-// // 07 Write a #JavaScript program to check if the last digit of the three given positive integers is the same.
 // // // 13 Write a #JavaScript program to remove a character at the specified position of a given string and return the new string.
 
-// // const str = 'my name is lucky hudda';
+const removeChr = function (str, position) {
+  if (position > str.length || position < 0) return `Invalid position value`;
 
-// // const removeChr = function(){
+  let newStr = "";
 
-// // }
-// // // console.log(removeChr())
+  for (let i = 0; i < str.length; i++) {
+    if (position !== i) {
+      console.log(str[i]);
+      newStr += str[i];
+    }
+  }
+
+  return newStr;
+};
+console.log(removeChr("lucky hudda", 2));
 
 // // 14  Write a #JavaScript program to create a new string from a given string changing the position of the first and last characters. The string length must be greater than or equal to 2
 
@@ -1467,7 +1452,6 @@ return obj;
 // // // 108  Write a #JavaScript Program to Check if a Number is a Float or Integer.
 // // // 109 : Write a #JavaScript Program to Pass a Function as Parameter.
 // // // 110 : Write a #JavaScript Program to Get the Dimensions of an Image
-// // // 111  Write a #JavaScript Program to Remove All Whitespaces From a Text
 
 // // //  112   Write a #JavaScript Program to find factorial recursevly
 // // 5! => 5*4*3*2*1
@@ -1662,3 +1646,24 @@ return obj;
 // // // // Write a program to multiply two matrices.
 // // // // Write a program to find the subarray with the largest sum in an array.
 // // // // Write a program to find the subarray with the smallest sum in an array.
+
+// // // 111  Write a #JavaScript Program to Remove All Whitespaces From a Text
+// // // // Here are some common promises-related problem-solving questions in JavaScript:
+// // // // 01  Write a program to create a promise that resolves after a given amount of time.
+// // // // 02  Write a program to chain promises.
+// // // // 03  Write a program to handle errors in a promise chain.
+// // // // 04  Write a program to use Promise.all to execute multiple promises concurrently.
+// // // // 05  Write a program to use Promise.race to execute multiple promises concurrently and return the result of the first one that resolves.
+// // // // 06  Write a program to use async/await to handle promises in a synchronous-looking way.
+// // // // 07  Write a program to use Promise.resolve and Promise.reject to create resolved and rejected promises, respectively.
+// // // // 08  Write a program to use the finally method to execute code after a promise resolves or rejects.
+// // // // 09  Write a program to use Promise.any to execute multiple promises concurrently and return the result of the first one that resolves, ignoring any rejections.
+// // // // 10  Write a program to use Promise.allSettled to execute multiple promises concurrently and return an array of their results, whether they resolved or rejected.
+
+// //Q. WAP to calculate the HCF of any two numbers
+
+// // 03 Write a #JavaScript program to find which 1st January is a Sunday between 2014 and 2050.
+// // 04 Write a #JavaScript program to calculate the number of days left until next Christmas.
+// // 05 Write a #JavaScript program to convert temperatures to and from Celsius and Fahrenheit.
+
+// // 07 Write a #JavaScript program to check if the last digit of the three given positive integers is the same.
