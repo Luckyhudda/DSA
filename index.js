@@ -1094,20 +1094,45 @@ function ReplaceChar(str) {
     return str[str.length - 1] + str.slice(1, -1) + str[0];
   }
 }
-console.log(ReplaceChar("Lucky"));
+// console.log(ReplaceChar("Lucky"));
+
+
+
+// get all duplicates from array...
+
+function getDuplicates(arr){
+
+
+  const tracker = {};
+  const duplicate = [];
+
+  for(let i =0; i<arr.length;i++){
+    tracker[arr[i]] = (tracker[arr[i]] || 0) +1
+  }
+
+  for(let j = 0; j<arr.length;j++){
+    if(tracker[arr[j]] >1){
+      duplicate.push(arr[j])
+    }
+  }
+
+  return duplicate
+
+};
+// console.log(getDuplicates([1,2,3,4,5,6,3,7,5,3]))
 
 // // // 17 Write a #JavaScript program to create a new string from a given string taking the last 3 characters and adding at both the front and back. The string length must be 3 or more.
 
 // let mainStr = 'lucky';
 
-// function bothSideResult(str){
-//     if(str.length < 3){
-//         return `Please provide a valid "String" with length of 3+`
-//     } else{
-//         let a = str[str.length -3] + str[str.length -2] + str[str.length -1]
-//         return a + str + a
-//     }
-// }
+function bothSideResult(str){
+    if(str.length < 3){
+        return `Please provide a valid "String" with length of 3+`
+    } else{
+        let a = str[str.length -3] + str[str.length -2] + str[str.length -1]
+        return a + str + a
+    }
+}
 // console.log(bothSideResult(mainStr));
 
 // // 18 Write a #JavaScript program to check if a string starts with 'Java' and false otherwise.
